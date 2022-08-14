@@ -1,9 +1,6 @@
-//════════════(00)═══════════════════════════════════════//
-//
-//                              K.PRABHASHA
-//𝙰𝙳𝙾𝙿𝚃𝙴𝙳 𝙵𝚁𝙾𝙼  𝚂𝙲𝚁𝙸𝙿𝚃 𝙾𝙵 𝙲𝙷𝙴𝙴𝙼𝚂𝙱𝙾𝚃 𝚅2 𝙱𝚈 𝙳𝙶𝚇𝚎𝚘𝚗 
-//
-//════════════(00)════════════════//
+//════════════(◇■◇)══════════════════════════════════//
+//New Version//
+//════════════(◇■◇)════════════════//
 
 const fs = require('fs')
 const chalk = require('chalk')
@@ -27,25 +24,25 @@ global.owner = ['+380944814219'] //Owner number in aive msg
 global.premium = ['+380944814219'] //Owner Number info
 global.ownernomer = '+380944814219' //Owner Number <<<
 
-global.ownername = '😎𝙆.𝙋𝙧𝙖𝙗𝙝𝙖𝙨𝙝𝙖' //Owner Name
-global.botname = ' ☬RED༒DRAGON' //Bot Name
+global.ownername = 'En*cuzier' 
+global.botname = '*Queen👸Alexa*' 
 
-global.button = '🤭මේක ටච් කරන්න📍' //Costomize A Button Name In Alive Message
-global.btnurl = '🙂🔥දැන් සැපද?😑' //Change Your Button's URL
+global.button = '◇alexa◇' 
+global.btnurl = 'https://github.com' 
 
-global.region = 'India, South India, Kerala' //Country Region
+global.region = 'India, South India, Kerala'
 
-global.packname = '☬RED༒DRAGON࿐' //Bot Pacage Name
-global.author = '😎𝙆.𝙋𝙧𝙖𝙗𝙝𝙖𝙨𝙝𝙖❯❯' //Author Name
+global.packname = 'Queen-Alexa'
+global.author = 'En*cuzier' 
 global.prefa = ['','!','.','😂','❤','💠'] //Command Prefix eg:(.alive ,alive 😂alive)
-global.sessionName = 'session' //Session Name!
-global.sp = '⭔' //A Charactor In Menu!
+global.sessionName = 'session'
+global.sp = '⭔'
 
 
-global.ig = 'https://github.com/prabhasha2006' //Github Account!
+global.ig = 'https://github.com/Queen-Alexa'
 global.footer = '©_Kumuthu.' // DO NOT CHANGE!
 
-global.mess = { // Error Mesages
+global.mess = { // Don't change
     success: 'Done ✅',
     admin: 'Only Admins can use it!😉',
     botAdmin: 'Bot wants to be an Admin😥',
