@@ -208,11 +208,11 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
 	
 	//group target by xeon\\
 const reply = (teks) => {
-            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/cheemspic.jpg`),"sourceUrl": "https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5"}}}, { quoted: m})
+            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-new/media/main.jpg`),"sourceUrl": "https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5"}}}, { quoted: m})
         }
         
         const replay = (teks) => {
-            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/cheemspic.jpg`),"sourceUrl": "https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"}}}, { quoted: m})
+            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-new/media/main.jpg`),"sourceUrl": "https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"}}}, { quoted: m})
         }
 	
         //Public & Self\\
@@ -2070,7 +2070,7 @@ break
         })
         }
         break
-	    case 'play': case 'song': case 'ytplay': {
+	    case 'play': case 'yt': case 'search': {
                 if (!text) return reply(`Example : ${prefix + command} Stay`)
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -2099,7 +2099,7 @@ break
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-	    case 'ytmp3': case 'getmusic': case 'ytaudio': {
+	    case 'ytmp3': case 'song': case 'audio': {
                 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
                 let quality = args[1] ? args[1] : '320kbps'
@@ -2109,7 +2109,7 @@ break
                 XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
-            case 'ytmp4': case 'getvideo': case 'ytvideo': {
+            case 'ytmp4': case 'mp4': case 'video': {
                 let { ytv } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
                 let quality = args[1] ? args[1] : '360p'
@@ -3286,7 +3286,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./XeonMedia/cheemspic.jpg')},
+                            jpegThumbnail: fs.readFileSync('./Alexa-new/media/main.jpg')},
                             hydratedFooterText: `┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
@@ -3346,7 +3346,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./XeonMedia/cheemspic.jpg')}, 
+                            jpegThumbnail: fs.readFileSync('./Alexa-new/media/main.jpg')}, 
                             hydratedFooterText: `
 ┌─❖
 │「 Hi 👋 」
@@ -3760,7 +3760,7 @@ case 'allmenu': {
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./XeonMedia/cheemspic.jpg')},
+                            jpegThumbnail: fs.readFileSync('./Alexa-new/media/main.jpg')},
                             hydratedFooterText: `${pushname}`,
                             hydratedButtons: [{
                                 urlButton: {
