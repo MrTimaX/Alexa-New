@@ -1,3 +1,6 @@
+# Queen-Alexa
+[logo](https://raw.githubusercontent.com/ChamodKeshan/Alexa-New/main/Alexa-New/media/main.jpg?token=GHSAT0AAAAAABXCNRVWU72ZQMJRKQ2Z5522YX3YTSA)
+
 # Thanks To
    [@adiwajshing](https://github.com/adiwajshing/Baileys)
    
