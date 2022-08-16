@@ -23,11 +23,12 @@ My Creator is ChamodKeshan` //Costomize Alive Message (type your message in `` )
 global.owner = ['+380944814219'] //Owner number in aive msg
 global.premium = ['+380944814219'] //Owner Number info
 global.ownernomer = '+380944814219' //Owner Number <<<
-global.alive_logo = 'https://github.com/ChamodKeshan/Alexa-New/blob/main/Alexa-New/media/image/main.jpg'
+global.alive_logo = 'https://raw.githubusercontent.com/ChamodKeshan/Alexa-New/main/Alexa-New/media/main.jpg?token=GHSAT0AAAAAABXCNRVWU72ZQMJRKQ2Z5522YX3YTSA'
 global.ownername = 'En*cuzier' 
 global.botname = '*Queen👸Alexa*' 
 
-global.button = '◇alexa◇' 
+global.button = '◇alexa◇'
+global.myweb = ' https://raw.githubusercontent.com/ChamodKeshan/Alexa-New/main/Alexa-New/media/main.jpg?token=GHSAT0AAAAAABXCNRVWU72ZQMJRKQ2Z5522YX3YTSA'
 global.btnurl = 'https://github.com' 
 
 global.region = 'India, South India, Kerala'
