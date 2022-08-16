@@ -3277,7 +3277,7 @@ Report Message: ${text}` })
 reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
                     }
                     break
-                    case 'tes': case 'test': case 'alive': case 'bot': case 'robot': case 'cheems': case 'doge':{
+                    case 'tes': case 'test': case 'alive': case 'bot': case 'robot': case 'ko bot': case 'neutro':{
                            	timestampe = speed();
 latensie = speed() - timestampe
  anu = ` `
@@ -3286,7 +3286,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./Alexa-new/media/main.jpg')},
+                            jpegThumbnail: global.alive_logo},
                             hydratedFooterText: `┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
