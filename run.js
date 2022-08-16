@@ -208,11 +208,11 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
 	
 	//group target by xeon\\
 const reply = (teks) => {
-            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-new/media/main.jpg`),"sourceUrl": "https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5"}}}, { quoted: m})
+            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-New/media/main.jpg`),"sourceUrl": "https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5"}}}, { quoted: m})
         }
         
         const replay = (teks) => {
-            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-new/media/main.jpg`),"sourceUrl": "https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"}}}, { quoted: m})
+            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-New/media/main.jpg`),"sourceUrl": "https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"}}}, { quoted: m})
         }
 	
         //Public & Self\\
@@ -266,25 +266,25 @@ const reply = (teks) => {
         //auto reply by xeon 🦄
         for (let anji of setik){
 				if (budy === anji){
-					result = fs.readFileSync(`./XeonMedia/sticker/${anji}.webp`)
+					result = fs.readFileSync(`./Alexa-New/sticker/${anji}.webp`)
 					XeonBotInc.sendMessage(m.chat, { sticker: result }, { quoted: m })
 					}
 			}
 			for (let anju of vien){
 				if (budy === anju){
-					result = fs.readFileSync(`./XeonMedia/vn/${anju}.mp3`)
+					result = fs.readFileSync(`./Alexa-New/vn/${anju}.mp3`)
 					XeonBotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 					}
 			}
 			for (let anjh of imagi){
 				if (budy === anjh){
-					result = fs.readFileSync(`./XeonMedia/image/${anjh}.jpg`)
+					result = fs.readFileSync(`./Alexa-New/image/${anjh}.jpg`)
 					XeonBotInc.sendMessage(m.chat, { image: result }, { quoted: m })
 					}
 			}
 					for (let anjh of videox){
 				if (budy === anjh){
-					result = fs.readFileSync(`./XeonMedia/vid/${anjh}.mp4`)
+					result = fs.readFileSync(`./Alexa-New/vid/${anjh}.mp4`)
 					XeonBotInc.sendMessage(m.chat, { video: result }, { quoted: m })
 					}
 				  }
@@ -2022,7 +2022,7 @@ break
 	    })
 	    }
 	    break
-	    case 'yts': case 'ytsearch': {
+	    case 'yt': case 'getvideo': {
                 if (!text) return replay(`Example : ${prefix + command} Anime Story Whatsapp`)
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -3346,7 +3346,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./Alexa-new/media/main.jpg')}, 
+                            jpegThumbnail: fs.readFileSync('./Alexa-New/media/main.jpg')}, 
                             hydratedFooterText: `
 ┌─❖
 │「 Hi 👋 」
@@ -3760,7 +3760,7 @@ case 'allmenu': {
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./Alexa-new/media/main.jpg')},
+                            jpegThumbnail: fs.readFileSync('./Alexa-New/media/main.jpg')},
                             hydratedFooterText: `${pushname}`,
                             hydratedButtons: [{
                                 urlButton: {
