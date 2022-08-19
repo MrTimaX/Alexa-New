@@ -29,6 +29,8 @@ global.botname = '*Queen👸Alexa*'
 
 global.button = '◇alexa◇'
 global.myweb = ' https://raw.githubusercontent.com/ChamodKeshan/Alexa-New/main/Alexa-New/media/main.jpg?token=GHSAT0AAAAAABXCNRVWU72ZQMJRKQ2Z5522YX3YTSA'
+global.sc = 'https://github.com/ChamodKeshan'
+global.script = 'https://github.com/ChamodKeshan
 global.btnurl = 'https://github.com' 
 
 global.region = 'India, South India, Kerala'
