@@ -2101,7 +2101,7 @@ break
             break
 	    case 'ytmp3': case 'song': case 'audio': {
                 let { yta } = require('./lib/y2mate')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
+                if (!text) return reply(`කරුණාකර සබැදියක් ඇතුලත් කරන්න. Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag`)
                 let quality = args[1] ? args[1] : '320kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
@@ -3277,7 +3277,7 @@ Report Message: ${text}` })
 reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
                     }
                     break
-                    case 'tes': case 'test': case 'alive': case 'bot': case 'robot': case 'ko bot': case 'neutro':{
+                    case 'tes': case 'test': case 'onlinebot': case 'bot': case 'robot': case 'ko bot': case 'neutro':{
                            	timestampe = speed();
 latensie = speed() - timestampe
  anu = ` `
@@ -3522,245 +3522,190 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }
             break
             case 'sc': case 'script': {
-                reply(`GitHub : https://github.com/DGXeon/CheemsBot-MD2\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
+                reply(`GitHub : https://github.com/ChamodKeshan\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
             }
             break
-case 'allmenu': {
+case 'menu': {
   	anu = `
-┏━「 *${botname}* 」━━⭓ 
-┃╔═══════✪「 MAIN 」
-┃╠ ${prefix}alive
-┃╠ ${prefix}script
-┃╠ ${prefix}speedtest
-┃╠ ${prefix}ping
-┃╠ ${prefix}owner
-┃╠ ${prefix}menu
-┃╠ ${prefix}delete
-┃╠ ${prefix}chatinfo
-┃╠ ${prefix}quoted
-┃╠ ${prefix}listpc
-┃╠ ${prefix}listgc
-┃╠ ${prefix}donate
-┃╠ ${prefix}report [bug]
-┃╠═══════✪「 OWNER 」	
-┃╠ ${prefix}chat [option]
-┃╠ ${prefix}join [link]
-┃╠ ${prefix}leave
-┃╠ ${prefix}block [user]
-┃╠ ${prefix}unblock [user]
-┃╠ ${prefix}bcgroup [text]
-┃╠ ${prefix}bcall [text]
-┃╠ ${prefix}setppbot [image]
-┃╠ ${prefix}setexif
-┃╠═══════✪「 GROUP 」	        
-┃╠${prefix}grouplink
-┃╠${prefix}ephemeral [option]
-┃╠${prefix}setgcpp [image]
-┃╠${prefix}setname [text]
-┃╠${prefix}setdesc [text]
-┃╠${prefix}group [text]
-┃╠${prefix}editinfo [option]
-┃╠${prefix}add [user]
-┃╠${prefix}kick [reply/tag]
-┃╠${prefix}hidetag [text]
-┃╠${prefix}tagall [text]
-┃╠${prefix}antilink [on/off]
-┃╠${prefix}mute [on/off]
-┃╠${prefix}promote [reply/tag]
-┃╠${prefix}demote [reply/tag]
-┃╠${prefix}vote
-┃╠${prefix}devote
-┃╠${prefix}upvote
-┃╠${prefix}checkvote
-┃╠${prefix}delvote
-┃╠═══════✪「 RPG 」	
-┃╠${prefix}hunting
-┃╠${prefix}mining
-┃╠${prefix}heal
-┃╠${prefix}userlimit
-┃╠${prefix}profile
-┃╠${prefix}inventory
-┃╠${prefix}leaderboard
-┃╠${prefix}buy [option]
-┃╠${prefix}sell [option]
-┃╠═════✪「 DOWNLOADER 」	
-┃╠${prefix}ytmp3 [url|quality]
-┃╠${prefix}ytmp4 [url|quality]
-┃╠${prefix}getmusic [yt link]
-┃╠${prefix}getvideo [yt link]
-┃╠${prefix}umma [query]
-┃╠${prefix}joox [query]
-┃╠${prefix}soundcloud [url]
-┃╠═══════✪「 SEARCHER 」	
-┃╠${prefix}play [query]
-┃╠${prefix}song [query]
-┃╠${prefix}yts [query]
-┃╠${prefix}google [query]
-┃╠${prefix}gimage [query]
-┃╠${prefix}pinterest [query]
-┃╠${prefix}wallpaper [query]
-┃╠${prefix}wikimedia [query]
-┃╠${prefix}ytsearch [query]
-┃╠${prefix}ringtone [query]
-┃╠${prefix}webtoon [query]
-┃╠═══════✪「 RANDOM 」
-┃╠${prefix}coffee
-┃╠${prefix}animequote (indo)
-┃╠${prefix}couplepp
-┃╠════✪「 RANDOM ANIME 」
-┃╠${prefix}loli
-┃╠${prefix}bully
-┃╠${prefix}cuddle
-┃╠${prefix}cry
-┃╠${prefix}hug
-┃╠${prefix}awoo
-┃╠${prefix}kiss
-┃╠${prefix}lick
-┃╠${prefix}pat
-┃╠${prefix}smug
-┃╠${prefix}bonk
-┃╠${prefix}yeet
-┃╠${prefix}blush
-┃╠${prefix}smile
-┃╠${prefix}wave
-┃╠${prefix}highfive
-┃╠${prefix}handhold
-┃╠${prefix}nom
-┃╠${prefix}glomp
-┃╠${prefix}bite
-┃╠${prefix}slap
-┃╠${prefix}kill
-┃╠${prefix}happy
-┃╠${prefix}wink
-┃╠${prefix}poke
-┃╠${prefix}dance
-┃╠${prefix}cringe
-┃╠═══════✪「 FUN 」
-┃╠ ${prefix}how [text
-┃╠ ${prefix}when [text]
-┃╠ ${prefix}is [text]
-┃╠ ${prefix}what [text]
-┃╠ ${prefix}can [text]
-┃╠ ${prefix}rate [text]
-┃╠ ${prefix}wangy [text]
-┃╠ ${prefix}beautifulcheck [tag]
-┃╠ ${prefix}awesomecheck [tag]
-┃╠ ${prefix}prettycheck [tag]
-┃╠ ${prefix}lesbiancheck [tag]
-┃╠ ${prefix}gaycheck [tag]
-┃╠ ${prefix}cutecheck [tag]
-┃╠ ${prefix}uglycheck [tag]
-┃╠ ${prefix}hornycheck [tag]
-┃╠ ${prefix}charactercheck [tag]
-┃╠ ${prefix}lovelycheck [tag]
-┃╠ ${prefix}couple
-┃╠ ${prefix}mysoulmate
-┃╠ ${prefix}hot
-┃╠ ${prefix}sexy
-┃╠ ${prefix}kind
-┃╠ ${prefix}idiot
-┃╠ ${prefix}handsome
-┃╠ ${prefix}beautiful
-┃╠ ${prefix}cute
-┃╠ ${prefix}pretty
-┃╠ ${prefix}lesbian
-┃╠ ${prefix}noob
-┃╠ ${prefix}bastard
-┃╠ ${prefix}foolish
-┃╠ ${prefix}nerd
-┃╠ ${prefix}asshole
-┃╠ ${prefix}gay
-┃╠ ${prefix}smart
-┃╠ ${prefix}stubble
-┃╠ ${prefix}dog
-┃╠ ${prefix}horny
-┃╠ ${prefix}cunt
-┃╠ ${prefix}wibu
-┃╠ ${prefix}tictactoe
-┃╠ ${prefix}delttt
-┃╠ ${prefix}guess [option]
-┃╠ ${prefix}math [mode]
-┃╠ ${prefix}suitpvp [tag]
-┃╠═══════✪「 CONVERTER 」
-┃╠ ${prefix}toimage [reply stick]
-┃╠ ${prefix}sticker [reply img|gif]
-┃╠ ${prefix}emojimix [moji+moji]
-┃╠ ${prefix}tovideo [reply img]
-┃╠ ${prefix}togif [reply stick]
-┃╠ ${prefix}tourl [reply img]
-┃╠ ${prefix}tovn [reply aud]
-┃╠ ${prefix}tomp3 [reply vn]
-┃╠ ${prefix}toaudio [reply vid]
-┃╠ ${prefix}ebinary [reply txt]
-┃╠ ${prefix}dbinary [reply txt]
-┃╠ ${prefix}styletext [text]
-┃╠══════✪「 DATABASE 」
-┃╠ ${prefix}setcmd
-┃╠ ${prefix}listcmd
-┃╠ ${prefix}delcmd
-┃╠ ${prefix}lockcmd
-┃╠ ${prefix}addmsg
-┃╠ ${prefix}listmsg
-┃╠ ${prefix}getmsg
-┃╠ ${prefix}delmsg
-┃╠══✪「 ANONYMOUS CHAT 」
-┃╠${prefix}anonymous
-┃╠${prefix}start
-┃╠${prefix}next
-┃╠${prefix}leave
-┃╠═══✪「 VOICE CHANGER 」
-┃╠${prefix}bass [reply aud]
-┃╠${prefix}blown [reply aud]
-┃╠${prefix}deep [reply aud]
-┃╠${prefix}earrape [reply aud]
-┃╠${prefix}fast [reply aud]
-┃╠${prefix}fat [reply aud]
-┃╠${prefix}nightcore [reply aud]
-┃╠${prefix}reverse [reply aud]
-┃╠${prefix}robot [reply aud]
-┃╠${prefix}slow [reply aud]
-┃╠${prefix}squirrel [reply aud]
-┃╠══════✪「 ISLAMIC 」
-┃╠${prefix}juzamma
-┃╠══════✪「 HOROSCOPE 」
-┃╠${prefix}nomorhoki (indo)
-┃╠${prefix}artimimpi (indo)
-┃╠${prefix}artinama (indo)
-┃╠${prefix}ramaljodoh (indo)
-┃╠${prefix}ramaljodohbali (indo)
-┃╠${prefix}suamiistri (indo)
-┃╠${prefix}ramalcinta (indo)
-┃╠${prefix}cocoknama (indo)
-┃╠${prefix}pasangan (indo)
-┃╠${prefix}jadiannikah (indo)
-┃╠${prefix}sifatusaha (indo)
-┃╠${prefix}rezeki (indo)
-┃╠${prefix}pekerjaan (indo)
-┃╠${prefix}nasib (indo)
-┃╠${prefix}penyakit (indo)
-┃╠${prefix}tarot (indo)
-┃╠${prefix}fengshui (indo)
-┃╠${prefix}haribaik (indo)
-┃╠${prefix}harisangar (indo)
-┃╠${prefix}harisial (indo)
-┃╠${prefix}nagahari (indo)
-┃╠${prefix}arahrezeki (indo)
-┃╠${prefix}peruntungan (indo)
-┃╠${prefix}weton (indo)
-┃╠${prefix}karakter (indo)
-┃╠${prefix}keberuntungan (indo)
-┃╠${prefix}memancing (indo)
-┃╠${prefix}masasubur (indo)
-┃╠${prefix}zodiak (indo)
-┃╠${prefix}shio (indo)
-┃╚═════════════✪
-┗━「 *Created By ${ownername}* 」━⭓`
+  *╭─「 ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ」*
+ │
+ *│ᴛʏᴘᴇ: .alexa get full Command list*
+ ├─────────●●►
+ *│🌼HEY,* User
+ *│👤Owner Name:* ChamodKeshan
+ *│💎Role:* Developer
+ *│📡Server:* Digital Ocean
+ *│📦Frameworks:* Nodejs
+ *│☬Working As*
+ *│🛡️free mode*
+ │ _©️ᴀᴍᴀᴢᴏɴᴇ-ᴛᴇᴇɴᴜ_
+ ╰──────────●●►
+
+ ╭──────────●●►
+*│🛡️BOT COMMANDS*
+ │   ───────
+ │
+ │► .alexa [All command list]
+ │► .alive [Check bot status]
+ │► .bot [chat with bot]
+ │► .Admin [ for owner ]
+ │► .version [check Version 
+ │►.update [check Update]
+ │►.update now [get update ]
+ │►.restart 
+ ╰───────────●●►
+
+ ╭───────────●●►
+ *│🧜‍♀STICKER COMMANDS*
+ │      ───────
+ │► .attp [text ]
+ │► .sticker
+ │► .photo
+ │► .listp
+ ╰────────────●●►
+
+ ╭────────────●●►
+ *│🧞‍♀️TEXT TO IMG*
+ │   ───────
+ │► .textimg 
+ │► .prologo (unlimited logos)
+ │► .prologo your Text
+ │► .moretext 
+ │► .ffpack [Free fire Logo pack]
+ │► .ttp [ text ]
+ │► .dttp [ text ]
+ │► .trumpsay [ text ]
+ │► .changesay [ text ]
+ │► .animesay [ text ]
+ │► .meme 
+ │► .listp
+ │► .mmpack
+ ╰────────────●●►
+
+ ╭────────────●●►
+ *│💰DOWNLOAD COMMANDS*
+ │      ────────
+ │► .video [ Yt Link]
+ │►.mp4    [Name]
+ │►.audio  [yt link ]
+ │► .download  [status download]
+ │►.song  [ song name ]
+ │►.dcsong [ song name ]
+ │►.img [ name ]
+ │►.fb  link ]
+ │►.tiktok [ link ]
+ │►.igv  [ Insta Video ]
+ │►.igp [ Insta Photo ]
+ │►.twt [twitter video Link]
+ │►.mediafire
+ ╰────────────●●►
+
+ ╭────────────●●►
+ *│🔍SEARCH COMMANDS*
+ │     ──────────
+ │► .yt [ topic ]
+ │► .wiki [text ]
+ │► .movie [ movie name ]
+ │► .github [ name ]
+ │► .show [tv series ]
+ │► .weather [ city ]
+ │
+ ╰────────────●●►
+
+ ╭────────────●●►
+ *│🛸GROUP COMMANDS*
+ │  ─────────
+ │► .rename [change Group name]
+ │► .rules    [check rules]
+ │► .info [check details]
+ │► .tagadmin 
+ │►.antispm
+ │►.clear
+ │► .report
+ │► .tagall  
+ │► .ban [ for owner ]
+ │► .add [ for owner ]
+ │► .promote [ for owner ]
+ │► .demote [ for owner ]
+ │► .invite [ for owner ]
+ │► .leave [ for owner ]
+ │►.welcome 
+ │►.goodbye
+ ╰───────────●●►
+
+ ╭───────────●●►
+ *│🎨MEDIA TOOLS*
+ │      ───────
+ │► .axmedia [25+ tools]
+ │► .tblend
+ │►.ocr [Read Text]
+ │►.mp3 [Video To mp3]
+ │► .ffmpeg [fade in:0:30 ]
+ │► .removebg
+ │► .spdf [convent site to pdf]
+ │► .voicy
+ │► .unvoice [mp3 to voice]
+ ╰───────────●●►
+
+ ╭───────────●●►
+ *│⚡MORE COMMAND*
+ │  ────────
+ │►.scan
+ │►.brdmore
+ │►.rdmore
+ │►.tts
+ │►.gm
+ │►.gn
+ │►.ftext
+ │► .wallpaper
+ │► .anime
+ │► .listanim
+ │► .device
+ │► .currency
+ │► .ss [link ]
+ │► .afk [ bot is online ]
+ │► .short { link ]
+ │► .wame [ get user link ]
+ │► .currency
+ │► .trt { en si }
+ │► .notes
+ │► .save
+ │► .deleteNotes
+ │► .covid  [ covid LK]
+ ╰────────────●●►
+
+ ╭───────────●●►
+ *│⚙️BOT SETTINGS*
+ │    ───────
+ │► .pp [set profilr pic]
+ │►.autobio on/off [change bio ]
+ │►.whatsblock on [WA link Block]
+ │►.inblock on /off 
+ │►.work public /private
+ │►.setrules
+ │► .setvar
+ │ ▷EMOJI_COMMAND:🛡️ [change Cmd emoj]
+ │ ▷EMOJI_DESCRIPTION:  🔍 [change des emoj]
+ │ ▷EMOJI_EXAMPLE:🔆 [change ex emoji]
+ │ ▷EMOJI_WARNING:⚠️ [change war emoj]
+ │ ▷BOT_NAME: <bot name> [change NAME]
+ │ ▷BIO: <your Text> [change bio]
+ │ ▷MENU_LOGO: <link> [change Logo]
+ │ ▷CAPTION: <text> [change caption]
+ │ ▷MENUINFO: <text> [change Menu info]
+ │ ▷SUDO: <number> [add sudo]
+ │    
+ │    THANK FOR
+ │     USING
+ │ AMAZONE ALEXA ✉️
+ │©️TEENU-X
+ ╰───────────●●►`
     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./Alexa-New/media/main.jpg')},
+                            jpegThumbnail: { url: 'https://telegra.ph/file/e8f3e419b3dafe9fe8153.jpg' },
                             hydratedFooterText: `${pushname}`,
                             hydratedButtons: [{
                                 urlButton: {
