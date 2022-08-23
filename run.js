@@ -3529,7 +3529,7 @@ case 'menu': {
   	anu = `
   *╭─「 ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ」*
  │
- *│ᴛʏᴘᴇ: .alexa get full Command list*
+ *│ᴛʏᴘᴇ: ${prefix}alexa get full Command list*
  ├─────────●●►
  *│🌼HEY,* User
  *│👤Owner Name:* ChamodKeshan
@@ -3545,145 +3545,145 @@ case 'menu': {
 *│🛡️BOT COMMANDS*
  │   ───────
  │
- │► .alexa [All command list]
- │► .alive [Check bot status]
- │► .bot [chat with bot]
- │► .Admin [ for owner ]
- │► .version [check Version 
- │►.update [check Update]
- │►.update now [get update ]
- │►.restart 
+ │► ${prefix}alexa [All command list]
+ │► ${prefix}alive [Check bot status]
+ │► ${prefix}bot [chat with bot]
+ │► ${prefix}Admin [ for owner ]
+ │► ${prefix}version [check Version 
+ │► ${prefix}update [check Update]
+ │► ${prefix}update now [get update ]
+ │► ${prefix}restart 
  ╰───────────●●►
 
  ╭───────────●●►
  *│🧜‍♀STICKER COMMANDS*
  │      ───────
- │► .attp [text ]
+ │► ${prefix}attp [text ]
  │► .sticker
- │► .photo
- │► .listp
+ │► ${prefix}photo
+ │► ${prefix}listp
  ╰────────────●●►
 
  ╭────────────●●►
  *│🧞‍♀️TEXT TO IMG*
  │   ───────
- │► .textimg 
- │► .prologo (unlimited logos)
- │► .prologo your Text
- │► .moretext 
- │► .ffpack [Free fire Logo pack]
- │► .ttp [ text ]
- │► .dttp [ text ]
- │► .trumpsay [ text ]
- │► .changesay [ text ]
- │► .animesay [ text ]
- │► .meme 
- │► .listp
- │► .mmpack
+ │► ${prefix}textimg 
+ │► ${prefix}prologo (unlimited logos)
+ │► ${prefix}prologo your Text
+ │► ${prefix}moretext 
+ │► ${prefix}ffpack [Free fire Logo pack]
+ │► ${prefix}ttp [ text ]
+ │► ${prefix}dttp [ text ]
+ │► ${prefix}trumpsay [ text ]
+ │► ${prefix}changesay [ text ]
+ │► ${prefix}animesay [ text ]
+ │► ${prefix}meme 
+ │► ${prefix}listp
+ │► ${prefix}mmpack
  ╰────────────●●►
 
  ╭────────────●●►
  *│💰DOWNLOAD COMMANDS*
  │      ────────
- │► .video [ Yt Link]
- │►.mp4    [Name]
- │►.audio  [yt link ]
- │► .download  [status download]
- │►.song  [ song name ]
- │►.dcsong [ song name ]
- │►.img [ name ]
- │►.fb  link ]
- │►.tiktok [ link ]
- │►.igv  [ Insta Video ]
- │►.igp [ Insta Photo ]
- │►.twt [twitter video Link]
- │►.mediafire
+ │► ${prefix}video [ Yt Link]
+ │► ${prefix}mp4    [Name]
+ │► ${prefix}audio  [yt link ]
+ │► ${prefix}download  [status download]
+ │► ${prefix}song  [ song name ]
+ │► ${prefix}dcsong [ song name ]
+ │► ${prefix}img [ name ]
+ │► ${prefix}fb  link ]
+ │► ${prefix}tiktok [ link ]
+ │► ${prefix}igv  [ Insta Video ]
+ │► ${prefix}igp [ Insta Photo ]
+ │► ${prefix}twt [twitter video Link]
+ │► ${prefix}mediafire
  ╰────────────●●►
 
  ╭────────────●●►
  *│🔍SEARCH COMMANDS*
  │     ──────────
- │► .yt [ topic ]
- │► .wiki [text ]
- │► .movie [ movie name ]
- │► .github [ name ]
- │► .show [tv series ]
- │► .weather [ city ]
+ │► ${prefix}yt [ topic ]
+ │► ${prefix}wiki [text ]
+ │► ${prefix}movie [ movie name ]
+ │► ${prefix}github [ name ]
+ │► ${prefix}show [tv series ]
+ │► ${prefix}weather [ city ]
  │
  ╰────────────●●►
 
  ╭────────────●●►
  *│🛸GROUP COMMANDS*
  │  ─────────
- │► .rename [change Group name]
- │► .rules    [check rules]
- │► .info [check details]
- │► .tagadmin 
- │►.antispm
- │►.clear
- │► .report
- │► .tagall  
- │► .ban [ for owner ]
- │► .add [ for owner ]
- │► .promote [ for owner ]
- │► .demote [ for owner ]
- │► .invite [ for owner ]
- │► .leave [ for owner ]
- │►.welcome 
- │►.goodbye
+ │► ${prefix}rename [change Group name]
+ │► ${prefix}rules    [check rules]
+ │► ${prefix}info [check details]
+ │► ${prefix}tagadmin 
+ │► ${prefix}antispm
+ │► ${prefix}clear
+ │► ${prefix}report
+ │► ${prefix}tagall  
+ │► ${prefix}ban [ for owner ]
+ │► ${prefix}add [ for owner ]
+ │► ${prefix}promote [ for owner ]
+ │► ${prefix}demote [ for owner ]
+ │► ${prefix}invite [ for owner ]
+ │► ${prefix}leave [ for owner ]
+ │► ${prefix}welcome 
+ │► ${prefix}goodbye
  ╰───────────●●►
 
  ╭───────────●●►
  *│🎨MEDIA TOOLS*
  │      ───────
- │► .axmedia [25+ tools]
- │► .tblend
- │►.ocr [Read Text]
- │►.mp3 [Video To mp3]
- │► .ffmpeg [fade in:0:30 ]
- │► .removebg
- │► .spdf [convent site to pdf]
- │► .voicy
- │► .unvoice [mp3 to voice]
+ │► ${prefix}axmedia [25+ tools]
+ │► ${prefix}tblend
+ │► ${prefix}ocr [Read Text]
+ │► ${prefix}mp3 [Video To mp3]
+ │► ${prefix}ffmpeg [fade in:0:30 ]
+ │► ${prefix}removebg
+ │► ${prefix}spdf [convent site to pdf]
+ │► ${prefix}voicy
+ │► ${prefix}unvoice [mp3 to voice]
  ╰───────────●●►
 
  ╭───────────●●►
  *│⚡MORE COMMAND*
  │  ────────
- │►.scan
- │►.brdmore
- │►.rdmore
- │►.tts
- │►.gm
- │►.gn
- │►.ftext
- │► .wallpaper
- │► .anime
- │► .listanim
- │► .device
- │► .currency
- │► .ss [link ]
- │► .afk [ bot is online ]
- │► .short { link ]
- │► .wame [ get user link ]
- │► .currency
- │► .trt { en si }
- │► .notes
- │► .save
- │► .deleteNotes
- │► .covid  [ covid LK]
+ │► ${prefix}scan
+ │► ${prefix}brdmore
+ │► ${prefix}rdmore
+ │► ${prefix}tts
+ │► ${prefix}gm
+ │► ${prefix}gn
+ │► ${prefix}ftext
+ │► ${prefix}wallpaper
+ │► ${prefix}anime
+ │► ${prefix}listanim
+ │► ${prefix}device
+ │► ${prefix}currency
+ │► ${prefix}ss [link ]
+ │► ${prefix}afk [ bot is online ]
+ │► ${prefix}short { link ]
+ │► ${prefix}wame [ get user link ]
+ │► ${prefix}currency
+ │► ${prefix}trt { en si }
+ │► ${prefix}notes
+ │► ${prefix}save
+ │► ${prefix}deleteNotes
+ │► ${prefix}covid  [ covid LK]
  ╰────────────●●►
 
  ╭───────────●●►
  *│⚙️BOT SETTINGS*
  │    ───────
- │► .pp [set profilr pic]
- │►.autobio on/off [change bio ]
- │►.whatsblock on [WA link Block]
- │►.inblock on /off 
- │►.work public /private
- │►.setrules
- │► .setvar
+ │► ${prefix}pp [set profilr pic]
+ │► ${prefix}autobio on/off [change bio ]
+ │► ${prefix}whatsblock on [WA link Block]
+ │► ${prefix}inblock on /off 
+ │► ${prefix}work public /private
+ │► ${prefix}setrules
+ │► ${prefix}setvar
  │ ▷EMOJI_COMMAND:🛡️ [change Cmd emoj]
  │ ▷EMOJI_DESCRIPTION:  🔍 [change des emoj]
  │ ▷EMOJI_EXAMPLE:🔆 [change ex emoji]
