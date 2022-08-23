@@ -60,7 +60,7 @@ async function startRedDragonMdNx() {
     const RedDragonMdNx = NexusNwIncConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Gojo Satoru\Nexus','Safari','1.0.0'],
+        browser: ['Chrome','Safari','1.0.0'],
         auth: state
     })
 
