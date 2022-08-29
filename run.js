@@ -1447,7 +1447,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝ 
+let teks = `╚»˙·٠•●👸Queen-Alexa●•٠·˙«╝ 
  
  ➲ *Message : ${q ? q : 'no message'}*\n\n`
                 for (let mem of participants) {
@@ -3280,7 +3280,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
                     case 'tes': case 'test': case 'onlinebot': case 'bot': case 'robot': case 'ko bot': case 'neutro':{
                            	timestampe = speed();
 latensie = speed() - timestampe
- anu = ` `
+ anu = ` ` 
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
@@ -3525,6 +3525,10 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 reply(`GitHub : https://github.com/ChamodKeshan\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
             }
             break
+            case 'clear': case 'alexa': {
+                reply(`This commond is not ready\n try to contact alexa owner or alexa team\n\nTeenu : Wa.me/94\nChamod : Wa.me/94702256963\nEn-cuzier : Wa.me/\nTutux : Wa.me94`)
+                }
+                break
 case 'menu': {
   	anu = `
   *╭─「 ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ」*
@@ -3705,7 +3709,7 @@ case 'menu': {
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: { url: 'https://telegra.ph/file/e8f3e419b3dafe9fe8153.jpg' },
+                            jpegThumbnail: (url: 'https://telegra.ph/file/e8f3e419b3dafe9fe8153.jpg')},
                             hydratedFooterText: `${pushname}`,
                             hydratedButtons: [{
                                 urlButton: {
