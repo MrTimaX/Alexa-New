@@ -15,8 +15,6 @@
 
 ⦁═𝗤𝗨𝗘𝗘𝗡 👸 𝗔𝗟𝗘𝗫𝗔═⦁
 
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
  <p align="center">
 <a href="https://github.com/En-cuzier/Queen-Alexa-MD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/En-cuzier/Queen-Alexa-MD?color=blue&style=flat-square"></a>
 <a href="https://github.com/En-cuzier/Queen-Alexa-MD/fork"><img title="Forks" src="https://img.shields.io/github/forks/En-cuzier/Queen-Alexa-MD?color=red&style=flat-square"></a>
@@ -33,6 +31,7 @@
 
 <a href="https://github.com/En-cuzier/Queen-Alexa-MD"><img src="https://raw.githubusercontent.com/ChamodKeshan/Alexa-New/main/Alexa-New/media/image/20220404_081335.jpg">
  </p>    <a/>
+
 # 🧚‍♀️𝘾𝙡𝙞𝙘𝙠 𝙃𝙚𝙧𝙚 𝙩𝙤 𝙨𝙘𝙖𝙣💫
 
    <a href="https://replit.com/@ChamodKeshan/QueenAlexa-MD?output%20only=1&lite=1"><img src="https://repl.it/badge/github/ChamodKeshan/Queen-Alexa">
