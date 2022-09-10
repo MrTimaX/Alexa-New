@@ -33,7 +33,7 @@ global.script = 'https://github.com/ChamodKeshan'
 global.btnurl = 'https://github.com' 
 
 global.region = 'India, South India, Kerala'
-
+global.language = 'en'
 global.packname = 'Queen-Alexa'
 global.author = 'En*cuzier' 
 global.prefa = ['','!','.','😂','❤','💠'] //Command Prefix eg:(.alive ,alive 😂alive)
@@ -42,7 +42,7 @@ global.sp = '⭔'
 
 
 global.ig = 'https://github.com/Queen-Alexa'
-global.footer = '©_Kumuthu.' // DO NOT CHANGE!
+global.footer = '©_Queen_Alexa.' // DO NOT CHANGE!
 
 global.mess = { // Don't change
     success: 'Done ✅',
