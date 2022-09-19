@@ -100,11 +100,11 @@ async function startRedDragonMdNx() {
        try {
        ppgc = await RedDragonMdNx.profilePictureUrl(pea[0].id, 'image')
        } catch {
-       ppgc = 'https://shortlink.RedDragonMdNxarridho.my.id/rg1oT'
+       ppgc = 'https://telegra.ph/file/3983c55ac7f3ebea225d3.jpg'
        }
        let wm_fatih = { url : ppgc }
        if (pea[0].announce == true) {
-       RedDragonMdNx.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, `Group Settings Change Message`, wm_fatih, [])
+       RedDragonMdNx.send5ButImg(pea[0].id, `「 Group Settings 」\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, `Group Settings Change Message`, wm_fatih, [])
        } else if(pea[0].announce == false) {
        RedDragonMdNx.send5ButImg(pea[0].id, `「 Group Settings 」\n\nThe Group Has Been Opened By Admin, Now Participants Can Send Messages !`, `Group Settings Change Message`, wm_fatih, [])
        } else if (pea[0].restrict == true) {
@@ -150,11 +150,11 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 ⭐✑ Description: ${metadata.desc}
 
-⭐✑ Welcome To Our Comfortable Happy😋, Sometimes Loud😜, Usually Messy🤥, Full Of Love🥰, HOME😌!!`} )
+⭐✑ Welcome`} )
                 } else if (anu.action == 'remove') {
                     RedDragonMdNx.sendMessage(anu.id, { image: Tol, contextInfo: { mentionedJid: [num] }, caption: `⭐✑ @${num.split("@")[0]} Left ${metadata.subject}
 
-⭐✑ I'm Not Sure If It Was A Goodbye Charm, But It Was Fun While It Lasted 😌✨` })
+💔people come and go,that's life.` })
                 }
             }
         } catch (err) {
