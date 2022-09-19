@@ -3286,7 +3286,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: global.alive_logo},
+                            jpegThumbnail: $(global.alive_logo)},
                             hydratedFooterText: `┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
@@ -3709,7 +3709,7 @@ case 'menu': {
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: (url: 'https://telegra.ph/file/e8f3e419b3dafe9fe8153.jpg')},
+                            jpegThumbnail: fs.readFileSync('./Alexa-New/media/main.jpg')},
                             hydratedFooterText: `${pushname}`,
                             hydratedButtons: [{
                                 urlButton: {
