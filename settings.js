@@ -19,9 +19,9 @@ global.APIKeys = {
 
 global.alivemsg = `\n\n*👩‍🦰Queen Alexa*\n*💫🧚‍♀️Hey There Im Alive Now*\n\n*◉Version :► 8.5.1 (Public Release)*\n*◉Branch  :► Awsh*\n*◉About :► Amazone Alexa Is a Powerfull Bot For Whatsapp.*\n*◯●Github Link :►https://tinyurl.com/yhq3c6ms-\n\n*💫©Join Our Group*\n*▷📑News & Update Report*\n_◈https://chat.whatsapp.com/JdNWV3viiGKGINYNrb5oy8*\n▷⚡Official Pluggins Group* \n ◈https://chat.whatsapp.com/JJs2iwfF0VKL3IWrIyr7AT\n*🛡️Support Community*\n https://t.me/Queen_Alexa_Neotrox_Support💞` //Costomize Alive Message (type your message in `` )
 
-global.owner = ['+380944814219'] //Owner number in aive msg
-global.premium = ['+380944814219'] //Owner Number info
-global.ownernomer = '+380944814219' //Owner Number <<<
+global.owner = ['+94702256963'] //Owner number in aive msg
+global.premium = ['+94702256963'] //Owner Number info
+global.ownernomer = '+94702256963' //Owner Number <<<
 global.alive_logo = 'https://raw.githubusercontent.com/ChamodKeshan/Alexa-New/main/Alexa-New/media/main.jpg?token=GHSAT0AAAAAABXCNRVWU72ZQMJRKQ2Z5522YX3YTSA'
 global.ownername = 'En*cuzier' 
 global.botname = '*Queen👸Alexa*' 
@@ -43,7 +43,7 @@ global.sp = '⭔'
 
 global.ig = 'https://github.com/Queen-Alexa'
 global.footer = '©_Queen_Alexa.' // DO NOT CHANGE!
-
+CAPTIONS: process.env.CAPTIONS === undefined ? 'Made By 👩‍🦰Amazone' : process.env.CAPTIONS,
 global.mess = { // Don't change
     success: 'Done ✅',
     admin: 'Only Admins can use it!😉',
