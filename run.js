@@ -3522,7 +3522,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 reply(`This commond is not ready\n try to contact alexa owner or alexa team\n\nTeenu : Wa.me/94\nChamod : Wa.me/94702256963\nEn-cuzier : Wa.me/\nTutux : Wa.me94`)
                 }
                 break
-case 'menu': {
+case 'menu': case 'list': case 'help': {
   	anu = `
   *╭─「 ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ」*
  │
