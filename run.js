@@ -2020,7 +2020,7 @@ break
 	    }
 	    break
 	    case 'yt': case 'getvideo': {
-                if (!text) return replay(`Example : ${prefix + command} Anime Story Whatsapp`)
+                if (!text) return replay(`Example : ${prefix + command} How to create Queen-Alexa Whatsapp user bot`)
                 let yts = require("yt-search")
                 let search = await yts(text)
                 let teks = 'YouTube Search\n\n Result From '+text+'\n\n'
@@ -2066,7 +2066,7 @@ break
         }
         break
 	    case 'play': case 'you tube': case 'search': {
-                if (!text) return reply(`Example : ${prefix + command} Stay`)
+                if (!text) return reply(`Example : ${prefix + command} manike mage hithe`)
                 let yts = require("yt-search")
                 let search = await yts(text)
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
@@ -2619,7 +2619,7 @@ case 'webtonsearch': case 'webtoon':
         r_text[317] = "https://images.wallpaperscraft.com/image/kayak_boat_aerial_view_198191_1350x2400.jpg";
         r_text[318] = "https://images.wallpaperscraft.com/image/boat_kayak_sea_173969_1350x2400.jpg";
         r_text[319] = "https://images.wallpaperscraft.com/image/boat_sea_beach_171745_1350x2400.jpg";
-        r_text[320] = "https://images.wallpaperscraft.com/image/sea_beach_boat_144603_1350x2400.jpg";
+        r_text[320] = "https://images.wallpaperscraft.com/image/boat_sunset_sea_182192_1350x2400.jpg";
         r_text[321] = "https://images.wallpaperscraft.com/image/boat_beach_sea_175079_1350x2400.jpg";
         r_text[322] = "https://images.wallpaperscraft.com/image/boat_sea_sunset_water_shine_118003_1350x2400.jpg";
         r_text[323] = "https://images.wallpaperscraft.com/image/boat_sunset_sea_182192_1350x2400.jpg";
@@ -3325,7 +3325,7 @@ case 'webtonsearch': case 'webtoon':
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-            case 'tiktokwmx': case 'tiktokwatermarkx': {
+            case 'tiktok': case 'tiktokwatermarkx': {
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
@@ -3343,7 +3343,7 @@ case 'webtonsearch': case 'webtoon':
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-            case 'tiktokmp3x': case 'tiktokaudiox': {
+            case 'tiktokmp3': case 'tiktokaudiox': {
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/musically', { url: text }, 'apikey'))
@@ -3361,7 +3361,7 @@ case 'webtonsearch': case 'webtoon':
                 XeonBotInc.sendMessage(m.chat, { audio: { url: anu.result.audio }, mimetype: 'audio/mpeg'}, { quoted: msg })
             }
             break
-	        case 'instagramx': case 'igx': case 'igdlx': {
+	        case 'instagram': case 'igx': case 'igdlx': {
                 if (!text) return reply(`No Query Url!`)
                 reply(mess.wait)
                 if (/(?:\/p\/|\/reel\/|\/tv\/)([^\s&]+)/.test(isUrl(text)[0])) {
@@ -3398,7 +3398,7 @@ case 'webtonsearch': case 'webtoon':
                 XeonBotInc.sendMessage(m.chat, { audio: { url: anu.result.url }, mimetype: 'audio/mpeg', fileName: anu.result.title+'.m4a' }, { quoted: msg })
             }
             break
-	        case 'twitdlx': case 'twitterx': {
+	        case 'twitdlx': case 'twitter': {
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/twitter', { url: text }, 'apikey'))
@@ -3415,7 +3415,7 @@ case 'webtonsearch': case 'webtoon':
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-            case 'twittermp3x': case 'twitteraudiox': {
+            case 'twittermp3': case 'twitteraudio': {
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/twitter', { url: text }, 'apikey'))
@@ -3433,14 +3433,14 @@ case 'webtonsearch': case 'webtoon':
                 XeonBotInc.sendMessage(m.chat, { audio: { url: anu.result.audio } }, { quoted: msg })
             }
             break
-	        case 'fbdlx': case 'fbx': case 'facebookx': {
+	        case 'fb': case 'fbx': case 'facebook': {
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
                 XeonBotInc.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `🐶 Title : ${anu.result.title}`}, { quoted: m })
             }
             break
-	        case 'pindl': case 'pinterestdl': {
+	        case 'pindl': case 'pinterest': {
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/pinterestdl', { url: text }, 'apikey'))
