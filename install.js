@@ -126,7 +126,7 @@ async function startRedDragonMdNx() {
                 try {
                     ppuser = await RedDragonMdNx.profilePictureUrl(num, 'image')
                 } catch {
-                    ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+                    ppuser = 'https://i.imgur.com/rJBKu0Z.jpg'
                 }
 
                 //Get Profile Picture Group\\
@@ -241,6 +241,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
             else if (reason === DisconnectReason.timedOut) { console.log("🐦Connection TimedOut, Reconnecting..."); startRedDragonMdNx(); }
             else RedDragonMdNx.end(`🐦Unknown DisconnectReason: ${reason}|${connection}`)
         }
+        RedDragonMdNx.sendMessage("94786825798@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`Queen-Alexa\`\`\`\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer ChamodKeshan",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./Alexa-New/media/main.jpg'),sourceUrl:"https://wa.me/94786825798?text=welcome"}}})
         console.log('Connected...', update)
     })
 
