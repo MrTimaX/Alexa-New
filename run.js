@@ -3967,7 +3967,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         }
                     }
                 }), { userJid: m.chat })
-                WhatsAlexa.sendMessage(m.chat, template.message, { quoted: m })
+                WhatsAlexa.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
 break
             case 'list': case 'help': case 'neutro': {
@@ -4027,7 +4027,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         }
                     }
                 }), { userJid: m.chat })
-                WhatsAlexa.sendMessage(m.chat, template.message, { quoted: m })
+                WhatsAlexa.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
                 break
                 case 'command': {
@@ -4147,7 +4147,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
           listType: 1
                 }
             }), {})
-            WhatsAlexa.sendMessage(m.chat, template.message, { quoted: m })
+            WhatsAlexa.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
     case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
@@ -4373,7 +4373,7 @@ case 'menu': {
                         }
                     }
                 }), { userJid: m.chat })
-                WhatsAlexa.sendMessage(m.chat, template.message, { quoted: m })
+                WhatsAlexa.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
 break
 case 'mainmenu':
