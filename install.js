@@ -55,7 +55,7 @@ async function startXeonBotInc() {
     const XeonBotInc = XeonBotIncConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Queen Alexa','Safari','3.0'],
+        browser: ['Queen Alexa','Safari','1.0.0'],
         auth: state
     })
 
