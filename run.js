@@ -208,11 +208,11 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
 	
 	//group target by xeon\\
 const reply = (teks) => {
-            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/cheemspic.jpg`),"sourceUrl": "https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5"}}}, { quoted: m})
+            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-New/media/main.jpg`),"sourceUrl": "https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5"}}}, { quoted: m})
         }
         
         const replay = (teks) => {
-            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/cheemspic.jpg`),"sourceUrl": "https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"}}}, { quoted: m})
+            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-New/media/main.jpg`),"sourceUrl": "https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"}}}, { quoted: m})
         }
 	
         //Public & Self\\
@@ -3286,7 +3286,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./XeonMedia/cheemspic.jpg')},
+                            jpegThumbnail: fs.readFileSync('./Alexa-new/media/main.jpg')},
                             hydratedFooterText: `┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
@@ -3346,25 +3346,181 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./XeonMedia/cheemspic.jpg')}, 
+                            jpegThumbnail: fs.readFileSync('./Alexa-new/media/main.jpg')}, 
                             hydratedFooterText: `
-┌─❖
-│「 Hi 👋 」
-└┬❖ 「 ${pushname} 」
-┌┤✑  How Are You? 😄
-│└───────────────┈ ⳹
-│ 「 BOT INFO 」
-│✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│✙ 𝗢𝘄??𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${global.owner}
-│✙ 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│✙ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│✙ 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-└┬──────────────┈ ⳹
-   │✑  Please Select The Button Below
-   └───────────────┈ ⳹`,
+*╭─「 ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ」*
+ │
+ *│ᴛʏᴘᴇ: ${prefix}alexa get full Command list*
+ ├─────────●●►
+ *│🌼HEY,* User
+ *│👤Owner Name:* ChamodKeshan
+ *│💎Role:* Developer
+ *│📡Server:* Digital Ocean
+ *│📦Frameworks:* Nodejs
+ *│☬Working As*
+ *│🛡️free mode*
+ │ _©️ᴀᴍᴀᴢᴏɴᴇ-ᴛᴇᴇɴᴜ_
+ ╰──────────●●►
+
+ ╭──────────●●►
+*│🛡️BOT COMMANDS*
+ │   ───────
+ │
+ │► ${prefix}alexa [All command list]
+ │► ${prefix}alive [Check bot status]
+ │► ${prefix}bot [chat with bot]
+ │► ${prefix}Admin [ for owner ]
+ │► ${prefix}version [check Version 
+ │► ${prefix}update [check Update]
+ │► ${prefix}update now [get update ]
+ │► ${prefix}restart 
+ ╰───────────●●►
+
+ ╭───────────●●►
+ *│🧜‍♀STICKER COMMANDS*
+ │      ───────
+ │► ${prefix}attp [text ]
+ │► .sticker
+ │► ${prefix}photo
+ │► ${prefix}listp
+ ╰────────────●●►
+
+ ╭────────────●●►
+ *│🧞‍♀️TEXT TO IMG*
+ │   ───────
+ │► ${prefix}textimg 
+ │► ${prefix}prologo (unlimited logos)
+ │► ${prefix}prologo your Text
+ │► ${prefix}moretext 
+ │► ${prefix}ffpack [Free fire Logo pack]
+ │► ${prefix}ttp [ text ]
+ │► ${prefix}dttp [ text ]
+ │► ${prefix}trumpsay [ text ]
+ │► ${prefix}changesay [ text ]
+ │► ${prefix}animesay [ text ]
+ │► ${prefix}meme 
+ │► ${prefix}listp
+ │► ${prefix}mmpack
+ ╰────────────●●►
+
+ ╭────────────●●►
+ *│💰DOWNLOAD COMMANDS*
+ │      ────────
+ │► ${prefix}video [ Yt Link]
+ │► ${prefix}mp4    [Name]
+ │► ${prefix}audio  [yt link ]
+ │► ${prefix}download  [status download]
+ │► ${prefix}song  [ song name ]
+ │► ${prefix}dcsong [ song name ]
+ │► ${prefix}img [ name ]
+ │► ${prefix}fb  link ]
+ │► ${prefix}tiktok [ link ]
+ │► ${prefix}igv  [ Insta Video ]
+ │► ${prefix}igp [ Insta Photo ]
+ │► ${prefix}twt [twitter video Link]
+ │► ${prefix}mediafire
+ ╰────────────●●►
+
+ ╭────────────●●►
+ *│🔍SEARCH COMMANDS*
+ │     ──────────
+ │► ${prefix}yt [ topic ]
+ │► ${prefix}wiki [text ]
+ │► ${prefix}movie [ movie name ]
+ │► ${prefix}github [ name ]
+ │► ${prefix}show [tv series ]
+ │► ${prefix}weather [ city ]
+ │
+ ╰────────────●●►
+
+ ╭────────────●●►
+ *│🛸GROUP COMMANDS*
+ │  ─────────
+ │► ${prefix}rename [change Group name]
+ │► ${prefix}rules    [check rules]
+ │► ${prefix}info [check details]
+ │► ${prefix}tagadmin 
+ │► ${prefix}antispm
+ │► ${prefix}clear
+ │► ${prefix}report
+ │► ${prefix}tagall  
+ │► ${prefix}ban [ for owner ]
+ │► ${prefix}add [ for owner ]
+ │► ${prefix}promote [ for owner ]
+ │► ${prefix}demote [ for owner ]
+ │► ${prefix}invite [ for owner ]
+ │► ${prefix}leave [ for owner ]
+ │► ${prefix}welcome 
+ │► ${prefix}goodbye
+ ╰───────────●●►
+
+ ╭───────────●●►
+ *│🎨MEDIA TOOLS*
+ │      ───────
+ │► ${prefix}axmedia [25+ tools]
+ │► ${prefix}tblend
+ │► ${prefix}ocr [Read Text]
+ │► ${prefix}mp3 [Video To mp3]
+ │► ${prefix}ffmpeg [fade in:0:30 ]
+ │► ${prefix}removebg
+ │► ${prefix}spdf [convent site to pdf]
+ │► ${prefix}voicy
+ │► ${prefix}unvoice [mp3 to voice]
+ ╰───────────●●►
+
+ ╭───────────●●►
+ *│⚡MORE COMMAND*
+ │  ────────
+ │► ${prefix}scan
+ │► ${prefix}brdmore
+ │► ${prefix}rdmore
+ │► ${prefix}tts
+ │► ${prefix}gm
+ │► ${prefix}gn
+ │► ${prefix}ftext
+ │► ${prefix}wallpaper
+ │► ${prefix}anime
+ │► ${prefix}listanim
+ │► ${prefix}device
+ │► ${prefix}currency
+ │► ${prefix}ss [link ]
+ │► ${prefix}afk [ bot is online ]
+ │► ${prefix}short { link ]
+ │► ${prefix}wame [ get user link ]
+ │► ${prefix}currency
+ │► ${prefix}trt { en si }
+ │► ${prefix}notes
+ │► ${prefix}save
+ │► ${prefix}deleteNotes
+ │► ${prefix}covid  [ covid LK]
+ ╰────────────●●►
+
+ ╭───────────●●►
+ *│⚙️BOT SETTINGS*
+ │    ───────
+ │► ${prefix}pp [set profilr pic]
+ │► ${prefix}autobio on/off [change bio ]
+ │► ${prefix}whatsblock on [WA link Block]
+ │► ${prefix}inblock on /off 
+ │► ${prefix}work public /private
+ │► ${prefix}setrules
+ │► ${prefix}setvar
+ │ ▷EMOJI_COMMAND:🛡️ [change Cmd emoj]
+ │ ▷EMOJI_DESCRIPTION:  🔍 [change des emoj]
+ │ ▷EMOJI_EXAMPLE:🔆 [change ex emoji]
+ │ ▷EMOJI_WARNING:⚠️ [change war emoj]
+ │ ▷BOT_NAME: <bot name> [change NAME]
+ │ ▷BIO: <your Text> [change bio]
+ │ ▷MENU_LOGO: <link> [change Logo]
+ │ ▷CAPTION: <text> [change caption]
+ │ ▷MENUINFO: <text> [change Menu info]
+ │ ▷SUDO: <number> [add sudo]
+ │    
+ │    THANK FOR
+ │     USING
+ │ AMAZONE ALEXA ✉️
+ │©️TEENU-X
+ ╰───────────●●►`,
                             hydratedButtons: [{
                                 urlButton: {
                                     displayText: 'YouTube📍',
@@ -3760,7 +3916,7 @@ case 'allmenu': {
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./XeonMedia/cheemspic.jpg')},
+                            jpegThumbnail: fs.readFileSync('./Alexa-New/media/main.jpg')},
                             hydratedFooterText: `${pushname}`,
                             hydratedButtons: [{
                                 urlButton: {
