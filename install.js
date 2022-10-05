@@ -33,7 +33,7 @@ global.db = new Low(
   /https?:\/\//.test(opts['db'] || '') ?
     new cloudDBAdapter(opts['db']) : /mongodb/.test(opts['db']) ?
       new mongoDB(opts['db']) :
-      new JSONFile(`Queen-Alexa/database.json`)
+      new JSONFile(`database/database.json`)
 )
 global.db.data = {
     users: {},
@@ -55,7 +55,7 @@ async function startXeonBotInc() {
     const XeonBotInc = XeonBotIncConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Subscribe Xeon','Safari','1.0.0'],
+        browser: ['Queen Alexa','Safari','3.0'],
         auth: state
     })
 
