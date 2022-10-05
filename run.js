@@ -200,11 +200,10 @@ module.exports = WhatsAlexa = async (WhatsAlexa, m, chatUpdate, store) => {
         }
 	
 	//group target by xeon\\
-const reply = (teks) => {
-            WhatsAlexa.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-New/media/main.jpg`),"sourceUrl": "https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5"}}}, { quoted: m})
-        }
+const errormsg = (teks) => {
+            WhatsAlexa.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/6ba2aed566865a068e91f.jpg' }, caption: teks}, { quoted: m })
         
-        const errormsg = (teks) => {
+        const reply = (teks) => {
             WhatsAlexa.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-New/media/main.jpg`),"sourceUrl": "https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5"}}}, { quoted: m})
         }
         
@@ -2920,11 +2919,10 @@ case 'webtonsearch': case 'webtoon':
         r_text[618] = "https://images.wallpaperscraft.com/image/face_funny_art_141579_1350x2400.jpg";
         r_text[619] = "https://images.wallpaperscraft.com/image/face_surprise_emotions_141979_1350x2400.jpg";
         r_text[620] = "https://images.wallpaperscraft.com/image/smiley_emotions_minimalism_134124_1350x2400.jpg";
-        var i = Math.floor(621*Math.random())
-        var respoimage = await axios.get(`${r_text[i]}`)
         let { wikimedia } = require('./lib/scraper')
                 anu = await wikimedia(text)
-                result = Math.floor(621*Math.random())
+                i = Math.floor(621*Math.random())
+                result = await axios.get(`${r_text[i]}`)
                 let buttons = [
                     {buttonId: `alexawallpaper`, buttonText: {displayText: 'Next️'}, type: 1}
                 ]
@@ -3913,7 +3911,7 @@ Report Message: ${text}` })
 reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
                     }
                     break
-                    case 'alive': case 'test': case 'onlinebot': case 'bot': case 'robot': case 'ko bot': case 'neutro':{
+                    case 'alive': case 'test': case 'onlinebot': case 'check': {
                            	timestampe = speed();
 latensie = speed() - timestampe
  anu = ` ` 
@@ -3922,7 +3920,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: $(global.alive_logo)},
+                            jpegThumbnail: { url: 'https://telegra.ph/file/6ba2aed566865a068e91f.jpg' },
                             hydratedFooterText: `┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
@@ -3969,10 +3967,10 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         }
                     }
                 }), { userJid: m.chat })
-                WhatsAlexa.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                WhatsAlexa.sendMessage(m.chat, template.message, { quoted: m })
                 }
 break
-            case 'lixt': case 'lizt': case 'help': case 'neutro': {
+            case 'list': case 'help': case 'neutro': {
             	timestampe = speed();
 latensie = speed() - timestampe
                 anu = ``
@@ -4029,7 +4027,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         }
                     }
                 }), { userJid: m.chat })
-                WhatsAlexa.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                WhatsAlexa.sendMessage(m.chat, template.message, { quoted: m })
                 }
                 break
                 case 'command': {
@@ -4149,7 +4147,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
           listType: 1
                 }
             }), {})
-            WhatsAlexa.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            WhatsAlexa.sendMessage(m.chat, template.message, { quoted: m })
             }
             break
     case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
@@ -4161,10 +4159,10 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }
             break
             case 'clear': case 'alexa': {
-                reply(`This commond is not ready\n try to contact alexa owner or alexa team\n\nTeenu : Wa.me/94\nChamod : Wa.me/94702256963\nEn-cuzier : Wa.me/\nTutux : Wa.me94`)
+                errormsg(`This commond is not ready\n try to contact alexa owner or alexa team\n\nTeenu : Wa.me/94766598862\nChamod : Wa.me/94702256963\nEn-cuzier : Wa.me/\nTutux : Wa.me/94781508896`)
                 }
                 break
-case 'menu': case 'list': case 'help': {
+case 'menu': {
   	anu = `
   *╭─「 ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ」*
  │
@@ -4375,7 +4373,7 @@ case 'menu': case 'list': case 'help': {
                         }
                     }
                 }), { userJid: m.chat })
-                WhatsAlexa.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                WhatsAlexa.sendMessage(m.chat, template.message, { quoted: m })
             }
 break
 case 'mainmenu':
