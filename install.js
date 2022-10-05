@@ -268,7 +268,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
             }
             }
             }), options)
-            WhatsAlexa.sendMessage(jid, template.message, { quoted: m })
+            WhatsAlexa.sendMessage(jid, template.message, { messageId: template.key.id })
     }
 
     /**
