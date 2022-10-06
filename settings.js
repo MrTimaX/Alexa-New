@@ -31,7 +31,7 @@ global.ownername = 'En*cuzier'
 global.botname = '*Queen👸Alexa*' 
 
 global.button = '◇alexa◇'
-global.myweb = ' https://raw.githubusercontent.com/ChamodKeshan/Alexa-New/main/Alexa-New/media/main.jpg?token=GHSAT0AAAAAABXCNRVWU72ZQMJRKQ2Z5522YX3YTSA'
+global.myweb = 'github.com/ChamodKeshan'
 global.sc = 'https://github.com/ChamodKeshan'
 global.script = 'https://github.com/ChamodKeshan'
 global.btnurl = 'https://github.com' 
@@ -43,19 +43,7 @@ global.author = 'En*cuzier'
 global.prefa = ['','!','.','😂','❤','💠'] //Command Prefix eg:(.alive ,alive 😂alive)
 global.sessionName = 'session'
 global.sp = '⭔'
-    LANG= process.env.LANGUAGE === undefined ? 'TR' : process.env.LANGUAGE.toUpperCase(),
-    ALIVEMSG= process.env.ALIVE_MESSAGE === undefined ? 'default' : process.env.ALIVE_MESSAGE,
-    KICKMEMSG= process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
-    BLOCKCHAT= process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
-    ADDMSG= process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
-    MUTEMSG= process.env.MUTE_MESSAGE === undefined ? 'default' : process.env.MUTE_MESSAGE,
-    NOLOG= process.env.NO_LOG === undefined ? 'false' : process.env.NO_LOG,
-    BLOCKMSG= process.env.BLOCK_MESSAGE === undefined ? 'default' : process.env.BLOCK_MESSAGE,
-    UNBLOCKMSG= process.env.UNBLOCK_MESSAGE === undefined ? 'default' : process.env.UNBLOCK_MESSAGE,
-    UNMUTEMSG= process.env.UNMUTE_MESSAGE === undefined ? 'default' : process.env.UNMUTE_MESSAGE,
-    WORKTYPE= process.env.WORK_TYPE === undefined ? 'private' : process.env.WORK_TYPE,
-    PROMOTEMSG= process.env.PROMOTE_MESSAGE === undefined ? 'default' : process.env.PROMOTE_MESSAGE,
-    DEMOTEMSG= process.env.DEMOTE_MESSAGE === undefined ? 'default' : process.env.DEMOTE_MESSAGE,
+ALIVEMSG = 'default'
 
 global.ig = 'https://github.com/Queen-Alexa'
 global.footer = '©_Queen_Alexa.' // DO NOT CHANGE!
