@@ -2119,10 +2119,10 @@ break
                 XeonBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐶 Title : ${media.title}\n🐶 File Size : ${media.filesizeF}\n🐶 Url : ${isUrl(text)}\n🐶 Ext : MP3\n🐶 Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
-            case 'alexa': case 'amazone': case 'neotro': {
+            case 'amazone': case 'neotro': {
                 let buttons = [
-                    {buttonId: `github`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
-                    {buttonId: `system`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
+                    {buttonId: `github`, buttonText: {displayText: '👨‍💻STATUS'}, type: 1},
+                    {buttonId: `system`, buttonText: {displayText: '📱VERSION️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: 'https://telegra.ph/file/e8f3e419b3dafe9fe8153.jpg' },
@@ -3863,10 +3863,10 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }
             break
     case 'alive': {
-var MSG = ''
+let MSG = ''
 if (Config.ALIVEMSG == 'default') MSG = '```\n\n*👩‍🦰Queen Alexa*\n*💫🧚‍♀️Hey There Im Alive Now*\n\n*◉Version :► 8.5.1 (Public Release)*\n*◉Branch  :► Awsh*\n*◉About :► Amazone Alexa Is a Powerfull Bot For Whatsapp.*\n*◯●Github Link :►https://tinyurl.com/yhq3c6ms-\n\n*💫©Join Our Group*\n*▷📑News & Update Report*\n_◈https://chat.whatsapp.com/JdNWV3viiGKGINYNrb5oy8*\n▷⚡Official Pluggins Group* \n ◈https://chat.whatsapp.com/JJs2iwfF0VKL3IWrIyr7AT\n*🛡️Support Community*\n https://t.me/Queen_Alexa_Neotrox_Support💞```'
 else MSG = Config.ALIVEMSG
-                XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/e8f3e419b3dafe9fe8153.jpg' }, caption: MSG }, { quoted: m })
+                XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/e8f3e419b3dafe9fe8153.jpg' }, caption: MSG, { quoted: m })
          }
          break
     case 'menu': {
