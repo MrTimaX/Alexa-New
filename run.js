@@ -2024,7 +2024,7 @@ break
 	    }
 	    break
 	    case 'yts': case 'ytsearch': {
-                if (!text) return replay(`Example : ${prefix + command} Anime Story Whatsapp`)
+                if (!text) return replay(`Example : ${prefix + command} Free fire news`)
                 let yts = require("yt-search")
                 let search = await yts(text)
                 let teks = 'YouTube Search\n\n Result From '+text+'\n\n'
@@ -3866,7 +3866,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 let MSG = ''
 if (Config.ALIVEMSG == 'default') MSG = '```\n\n*👩‍🦰Queen Alexa*\n*💫🧚‍♀️Hey There Im Alive Now*\n\n*◉Version :► 8.5.1 (Public Release)*\n*◉Branch  :► Awsh*\n*◉About :► Amazone Alexa Is a Powerfull Bot For Whatsapp.*\n*◯●Github Link :►https://tinyurl.com/yhq3c6ms-\n\n*💫©Join Our Group*\n*▷📑News & Update Report*\n_◈https://chat.whatsapp.com/JdNWV3viiGKGINYNrb5oy8*\n▷⚡Official Pluggins Group* \n ◈https://chat.whatsapp.com/JJs2iwfF0VKL3IWrIyr7AT\n*🛡️Support Community*\n https://t.me/Queen_Alexa_Neotrox_Support💞```'
 else MSG = Config.ALIVEMSG
-                XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/e8f3e419b3dafe9fe8153.jpg' }, caption: MSG, { quoted: m })
+                XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/e8f3e419b3dafe9fe8153.jpg' }, caption: MSG }, { quoted: m })
          }
          break
     case 'menu': {
