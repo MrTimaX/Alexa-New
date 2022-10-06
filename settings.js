@@ -4,7 +4,6 @@
 
 const fs = require('fs');
 const chalk = require('chalk');
-const { Sequelize } = require('sequelize');
 if (fs.existsSync('settings.env')) require('dotenv').settings({ path: './settings.env' });
 function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
