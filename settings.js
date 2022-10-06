@@ -2,12 +2,12 @@
 //New Version//
 //════════════(◇■◇)════════════════//
 
-const fs = require('fs')
-const chalk = require('chalk')
-const { Sequelize } = require('sequelize')
-if (fs.existsSync('settings.env')) require('dotenv').settings({ path: './settings.env' })
+const fs = require('fs');
+const chalk = require('chalk');
+const { Sequelize } = require('sequelize');
+if (fs.existsSync('settings.env')) require('dotenv').settings({ path: './settings.env' });
 function convertToBool(text, fault = 'true') {
-    return text === fault ? true : false
+    return text === fault ? true : false;
 }
 
 //Api Website\\
@@ -44,7 +44,7 @@ global.author = 'En*cuzier'
 global.prefa = ['','!','.','😂','❤','💠'] //Command Prefix eg:(.alive ,alive 😂alive)
 global.sessionName = 'session'
 global.sp = '⭔'
-
+}
     LANG: process.env.LANGUAGE === undefined ? 'TR' : process.env.LANGUAGE.toUpperCase(),
     ALIVEMSG: process.env.ALIVE_MESSAGE === undefined ? 'default' : process.env.ALIVE_MESSAGE,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
