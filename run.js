@@ -1363,7 +1363,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
           reply(`Exif Has Been Successfully Changed to\n\n🐶 Packname : ${global.packname}\n🐶 Author : ${global.author}`)
             }
             break
-	case 'kick': {
+	case 'ban': {
 		if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -2103,7 +2103,7 @@ break
 	    case 'ytmp3': case 'getmusic': case 'ytaudio': {
 	            oh = `⛔ *INVAID DOWNLOADED*`
                 let { yta } = require('./lib/y2mate')
-                if (!link) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
                 let quality = args[1] ? args[1] : '320kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
@@ -2113,7 +2113,7 @@ break
              break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
-                if (!link) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
@@ -3046,6 +3046,11 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 		yy = await getBuffer(`https://islamic-api-indonesia.herokuapp.com/api/data/pdf/iqra${text}`)
 		XeonBotInc.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => reply(oh))
 		}
+		break
+		case 'anime': {
+		oh = `⛔Sorry'
+		yy = await getBuffer(`https://bx-hunter.herokuapp.com/api/sfw/shinobu?apikey=Ikyy69`)
+		XeonBotInc.sendMessage(m.chat, {image: yy}, {quoted:m}).catch ((err) => reply(oh))
 		break
 		case 'juzamma': {
 		if (args[0] === 'pdf') {
@@ -4054,6 +4059,10 @@ else MSG = `\n\n*‍Queen👸Alexa*\n*💫🧚‍♀️Hey There Im Alive Now*\n
             break
             case 'system': {
                 XeonBotInc.sendMessage(from, { text: `*👨‍💻VERSION = 1.0.0*\n*NEW UPDATE COMING SOON*\n*join alexa official support group*` }, { quoted: m})
+        }
+            break
+            case 'dyno': case 'clear': case 'mediafire': case 'fb': case 'tiktok': case 'panel': case 'mute': {
+                XeonBotInc.sendMessage(from, { text: `⛔ *එය තවස සූදානම් නොමැත.* ඇලෙක්සා bot ගේ මීලග version update එකෙන් පසුව බලාපොරොත්තු වන්න.* *Coming soon*` }, { quoted: m})
         }
             break
             case 'alexa': {
