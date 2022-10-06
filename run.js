@@ -2110,9 +2110,8 @@ break
                 XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             })
                 .catch((err) => {
-                    reply((`⛔️ *INVALID LINK*`)
+                    reply(`⛔️ *INVALID LINK*`)
                 })
-                }
             break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
