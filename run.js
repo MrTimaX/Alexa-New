@@ -2144,8 +2144,6 @@ break
                         description: arama[0].description
                     })
                 writer.addTag()
-
-                repy = reply(`*I am uploding song●●●*`)
                 XeonBotInc.sendMessage(m.chat,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: 'audio/mpeg', ptt: false, quoted: m })
              }
              break
