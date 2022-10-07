@@ -2143,8 +2143,8 @@ break
                         description: arama[0].description
                     })
                 writer.addTag()
-                XeonBotInc.sendMessage(m.chat,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: 'audio/mpeg', ptt: false, quoted: m })
-             }
+                XeonBotInc.sendMessage(m.chat, { audio: writer, mimetype: 'audio/mpeg', fileName: `${writer.title}.mp3` }, { quoted: m })
+                }
              break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
