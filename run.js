@@ -3445,6 +3445,13 @@ case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite'
 					XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
 					})
 					break
+				case 'anime':
+					reply(mess.wait)
+					axios.get(`https://rei-api.herokuapp.com/api/image/neko2`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data.result.url, mess.success, m)
+					})
+					break
 case "setmenuxxx": 
 if (!text) return reply("1. image\n2. list\n3. catalog\n\nExample .setmenu image")
 if (q == "image") {
