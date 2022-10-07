@@ -1257,7 +1257,7 @@ XeonBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${s
       case 'stubble':
       case 'dog':
       case 'fuck':
-      case 'ape':
+      case 'හුත්ත':
       case 'noob':
       case 'great':
       case 'horny':
@@ -2117,27 +2117,7 @@ break
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
                 XeonBotInc.sendImage(m.chat, media.thumb, `🐶 Title : ${media.title}\n🐶 File Size : ${media.filesizeF}\n🐶 Url : ${isUrl(text)}\n🐶 Ext : MP3\n🐶 Resolution : ${args[1] || '320kbps'}`, m)
                 XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
-             }
-             case '2song': { 
-        if (args[1] === '') return reply(`⛔NEED WORD`)    
-        let arama = await yts(args[1])
-        arama = arama.all
-        if(arama.length < 1) return reply(`⛔NO RESULT`)
-
-        let title = arama[0].title.replace(' ', '+')
-        let stream = ytdl(arama[0].videoId, {
-            quality: 'highestaudio',
-        })
-    
-        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'))
-        ffmpeg(stream)
-            .audioBitrate(320)
-            .save('./' + title + '.mp3')
-            .on('end', async () => {
-                let writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'))
-                
-                XeonBotInc.sendMessage(m.chat, { audio: writer, mimetype: 'audio/mpeg', fileName: `${writer.title}.mp3` }, { quoted: m })
-             }
+             }          
              break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
@@ -4089,8 +4069,8 @@ else MSG = `\n\n*‍Queen👸Alexa*\n*💫🧚‍♀️Hey There Im Alive Now*\n
                 XeonBotInc.sendMessage(from, { text: `*👨‍💻VERSION = 1.0.0*\n*NEW UPDATE COMING SOON*\n*join alexa official support group*` }, { quoted: m})
         }
             break
-            case 'dyno': case 'clear': case 'mediafire': case 'fb': case 'tiktok': case 'panel': case 'mute': {
-                XeonBotInc.sendMessage(from, { text: `⛔ *එය තවස සූදානම් නොමැත.* ඇලෙක්සා bot ගේ මීලග version update එකෙන් පසුව බලාපොරොත්තු වන්න.* *Coming soon*` }, { quoted: m})
+            case 'dyno': case 'clear': case 'mediafire': case 'fb': case 'tiktok': case 'panel': case 'mute': case 'update': {
+                XeonBotInc.sendMessage(from, { text: `⛔ *එය තවම සූදානම් නොමැත.* ඇලෙක්සා bot ගේ මීලග version update එකෙන් පසුව බලාපොරොත්තු වන්න.* *Coming soon*` }, { quoted: m})
         }
             break
             case 'alexa': {
