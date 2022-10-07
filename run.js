@@ -3047,14 +3047,6 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 		XeonBotInc.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => reply(oh))
 		}
 		break
-		case 'anime': {
-		oh = `⛔Sorry
-		reply(mess.wait)
-		axios.get(`https://bx-hunter.herokuapp.com/api/anime/getlastanime?apikey=ofvonOLhyolnp3OXFJLyNcxmP`)
-        .then(({data}) => {
-		XeonBotInc.sendImage(m.chat, data.result.url, mess.success, m)
-		})
-		break
 		case 'juzamma': {
 		if (args[0] === 'pdf') {
 		reply(mess.wait)
