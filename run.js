@@ -2118,7 +2118,7 @@ break
                 XeonBotInc.sendImage(m.chat, media.thumb, `🐶 Title : ${media.title}\n🐶 File Size : ${media.filesizeF}\n🐶 Url : ${isUrl(text)}\n🐶 Ext : MP3\n🐶 Resolution : ${args[1] || '320kbps'}`, m)
                 XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
              }
-             case '2song': 
+             case '2song': { 
         if (args[1] === '') return reply(`⛔NEED WORD`)    
         let arama = await yts(args[1])
         arama = arama.all
@@ -2137,6 +2137,7 @@ break
                 let writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'))
                 
                 XeonBotInc.sendMessage(m.chat, { audio: writer, mimetype: 'audio/mpeg', fileName: `${writer.title}.mp3` }, { quoted: m })
+             }
              break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
