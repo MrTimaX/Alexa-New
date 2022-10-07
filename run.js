@@ -2123,7 +2123,6 @@ break
         let arama = await yts(args[1])
         arama = arama.all
         if(arama.length < 1) return reply(`⛔NO RESULT`)
-        var repy = reply(`*I am downloading song●●●*)
 
         let title = arama[0].title.replace(' ', '+')
         let stream = ytdl(arama[0].videoId, {
