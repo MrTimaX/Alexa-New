@@ -237,7 +237,7 @@ const reply = (teks) => {
             console.log('Limit Reseted')
         }, {
             scheduled: true,
-            timezone: "Asia/Kolkata"
+            timezone: "Asia/Colombo"
         })
         
 	//auto set bio\\
@@ -1850,7 +1850,7 @@ break
                  let teks = `⬣ *GROUP CHAT LIST*\n\nTotal Group : ${anu.length} Group\n\n`
                  for (let i of anu) {
                      let metadata = await XeonBotInc.groupMetadata(i)
-                     teks += `🐕 *Name :* ${metadata.subject}\n🐕 *Owner :* @${metadata.owner.split('@')[0]}\n🐕 *ID :* ${metadata.id}\n🐕 *Made :* ${moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss')}\n🐕 *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
+                     teks += `🐕 *Name :* ${metadata.subject}\n🐕 *Owner :* @${metadata.owner.split('@')[0]}\n🐕 *ID :* ${metadata.id}\n🐕 *Made :* ${moment(metadata.creation * 1000).tz('Asia/Colombo').format('DD/MM/YYYY HH:mm:ss')}\n🐕 *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
                  }
                  XeonBotInc.sendTextWithMentions(m.chat, teks, m)
              }
@@ -3888,6 +3888,126 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"title": "Thanks To",
 										"description": "Displays The List Of Credit Of The Bot !!",
 										"rowId": `${prefix}tqtt`
+									}
+								]
+							}
+						],
+          listType: 1
+                }
+            }), {})
+            XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
+            break
+            case 'sticker-pack': {
+let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                listMessage :{
+                    title: `*Hi ${pushname}.I'm Queen-Alexa Whatsapp User Bot*`,
+                    description: `Please Choose The Sticker Pack\n\n`,
+                    buttonText: "Menu",
+                    footerText: `${global.footer}`,
+                    listType: "SINGLE_SELECT",
+                    sections: [{
+								"title": "Cute gril",
+								"rows": [
+									{
+										"title": "cute gril cartoon image",
+										"description": "sticker",
+										"rowId": `${prefix}loli`
+									}
+								]
+							},
+							{
+								"title": "kiss",
+								"rows": [
+									{
+										"title": "kiss",
+										"description": "sticker-pack",
+										"rowId": `${prefix}kiss`
+									},
+									{
+										"title": "smile",
+										"description": "smile",
+										"rowId": `${prefix}smile`
+										},
+									{
+										"title": "CRY",
+										"description": "cyy",
+										"rowId": `${prefix}cry`
+										},
+									{
+										"title": "kill",
+										"description": "kill sticker",
+										"rowId": `${prefix}kill`
+									},
+									{
+										"title": "hug",
+										"description": "hug sticker",
+										"rowId": `${prefix}hug`
+									},
+									{
+										"title": "pat",
+										"description": "sticker",
+										"rowId": `${prefix}pat`
+									},
+									{
+											"title": "lick",
+										"description": "lick sticker",
+										"rowId": `${prefix}lick`
+										},
+										{
+											"title": "bite",
+										"description": "bite sticker",
+										"rowId": `${prefix}bite`
+										},
+										{
+											"title": "yeet",
+										"description": "yeet sticker",
+										"rowId": `${prefix}sticker`
+										},
+										{
+											"title": "neko",
+										"description": "neko sticker",
+										"rowId": `${prefix}neko`
+										},
+										{
+											"title": "bully",
+										"description": "sticker",
+										"rowId": `${prefix}bully`
+										},
+										{
+											"title": "bonk",
+										"description": "bonk",
+										"rowId": `${prefix}bonk`
+										},
+										{
+											"title": "wink",
+										"description": "sticker",
+										"rowId": `${prefix}wink`
+										},
+										{
+											"title": "poke",
+										"description": "sticker",
+										"rowId": `${prefix}poke`
+										}
+								]
+							},
+							{
+								"title": "nom sticker",
+								"rows": [
+									{
+										"title": "nome",
+										"description": "sticker",
+										"rowId": `${prefix}nome`
+									}
+								]
+							},
+							{
+								"title": "smile",
+								"rows": [
+									{
+										"title": "sticker",
+										"description": "sticker",
+										"rowId": `${prefix}smile`
 									}
 								]
 							}
