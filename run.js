@@ -3049,8 +3049,8 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 		break
 		case 'anime': {
 		oh = `⛔Sorry'
-		yy = await getBuffer(`https://bx-hunter.herokuapp.com/api/sfw/shinobu?apikey=Ikyy69`)
-		XeonBotInc.sendMessage(m.chat, {image: yy}, {quoted:m}).catch ((err) => reply(oh))
+		yy = await axios.get(`https://bx-hunter.herokuapp.com/api/anime/getlastanime?apikey=ofvonOLhyolnp3OXFJLyNcxmP`)
+		XeonBotInc.sendMessage(m.chat, {image: yy, mimetype: 'image/jpeg', fileName: 'anime.jpeg'}, {quoted:m}).catch ((err) => reply(oh))
 		break
 		case 'juzamma': {
 		if (args[0] === 'pdf') {
