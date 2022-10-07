@@ -3050,7 +3050,7 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 		case 'anime': {
 		oh = `⛔Sorry
 		reply(mess.wait)
-		axios.get('https://bx-hunter.herokuapp.com/api/anime/getlastanime?apikey=ofvonOLhyolnp3OXFJLyNcxmP')
+		axios.get(`https://bx-hunter.herokuapp.com/api/anime/getlastanime?apikey=ofvonOLhyolnp3OXFJLyNcxmP`)
         .then(({data}) => {
 		XeonBotInc.sendImage(m.chat, data.result.url, mess.success, m)
 		})
@@ -3069,7 +3069,7 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 		reply(mess.wait)
 		XeonBotInc.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:m})
 		} else {
-		reply(`What Format Do You Want? ? Example : ${prefix + command} pdf Available Formats: pdf, docx, pptx, xlsx`)
+		reply(`What Format Do You Want? ? Example : ${prefix + command} pdf.Available Formats: pdf, docx, pptx, xlsx`)
 		}
 		}
 		break
