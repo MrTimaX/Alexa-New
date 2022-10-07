@@ -7,7 +7,7 @@
 //Thank you to Lord Buddha, Family and Myself
 //════════════════════════════//
 require('./settings')
-const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
+const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, MessageType } = require('@adiwajshing/baileys')
 const fs = require('fs')
 const util = require('util')
 const chalk = require('chalk')
@@ -109,6 +109,14 @@ const dgxeon = require('xfarr-api')
    const isInventoryLimit = cekDuluJoinAdaApaKagaLimitnyaDiJson(m.sender)
    const isInventoryMonay = cekDuluJoinAdaApaKagaMonaynyaDiJson(m.sender)
    const ikan = ['🐟','🐠','🐡']   
+   
+//YOU TUBE\\
+const ytdl = require('ytdl-core')
+const ffmpeg = require('fluent-ffmpeg')
+const yts = require( 'yt-search' )
+const got = require("got")
+const ID3Writer = require('browser-id3-writer')
+const SpotifyWebApi = require('spotify-web-api-node')
 
 //rpg database\\
  let _limit = JSON.parse(fs.readFileSync('./storage/user/limit.json'));
@@ -2023,7 +2031,7 @@ break
 	    })
 	    }
 	    break
-	    case 'yts': case 'ytsearch': {
+	    case 'yt': case 'ytsearch': {
                 if (!text) return replay(`Example : ${prefix + command} Free fire news`)
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -2109,6 +2117,36 @@ break
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
                 XeonBotInc.sendImage(m.chat, media.thumb, `🐶 Title : ${media.title}\n🐶 File Size : ${media.filesizeF}\n🐶 Url : ${isUrl(text)}\n🐶 Ext : MP3\n🐶 Resolution : ${args[1] || '320kbps'}`, m)
                 XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
+             }
+             case '2song': {
+        if (args[1] === '') return reply(`⛔NEED WORD`)    
+        let arama = await yts(args[1]);
+        arama = arama.all;
+        if(arama.length < 1) return reply(`⛔NO RESULT`)
+        var replysend = reply(`*I am downloading song●●●*)
+
+        let title = arama[0].title.replace(' ', '+');
+        let stream = ytdl(arama[0].videoId, {
+            quality: 'highestaudio',
+        });
+    
+        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
+        ffmpeg(stream)
+            .audioBitrate(320)
+            .save('./' + title + '.mp3')
+            .on('end', async () => {
+                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
+                writer.setFrame('TIT2', arama[0].title)
+                    .setFrame('TPE1', [arama[0].author.name])
+                    .setFrame('APIC', {
+                        type: 3,
+                        data: fs.readFileSync(title + '.jpg'),
+                        description: arama[0].description
+                    });
+                writer.addTag();
+
+                replysend = reply(`*I am uploding song●●●*`)
+                XeonBotInc.sendMessage(m.chat,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: 'audio/mpeg', ptt: false, quoted: m })
              }
              break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
