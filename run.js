@@ -110,13 +110,6 @@ const dgxeon = require('xfarr-api')
    const isInventoryMonay = cekDuluJoinAdaApaKagaMonaynyaDiJson(m.sender)
    const ikan = ['🐟','🐠','🐡']   
    
-//YOU TUBE\\
-const ytdl = require('ytdl-core')
-const ffmpeg = require('fluent-ffmpeg')
-const yts = require( 'yt-search' )
-const got = require("got")
-const ID3Writer = require('browser-id3-writer')
-const SpotifyWebApi = require('spotify-web-api-node')
 
 //rpg database\\
  let _limit = JSON.parse(fs.readFileSync('./storage/user/limit.json'));
@@ -2101,6 +2094,35 @@ break
 🐶 Channel : ${anu.author.url}
 🐶 Description : ${anu.description}
 🐶 Url : ${anu.url}`,
+                    footer: XeonBotInc.user.name,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
+            break
+            case 'logo-pack': {
+                let buttons = [
+                    {buttonId: `anime`, buttonText: {displayText: '*🧑Cartoon cute gril*'}, type: 1},
+                    {buttonId: `waifu`, buttonText: {displayText: '*Waifu*️'}, type: 1},
+                    {buttonId: `cry`, buttonText: {displayText: '*Cry*️️'}, type: 1},
+                    {buttonId: `kill`, buttonText: {displayText: '*Kill*'}, type: 1},
+                    {buttonId: `hug`, buttonText: {displayText: '*Hug*️️'}, type: 1},
+                    {buttonId: `pat`, buttonText: {displayText: '*Pat*️️'}, type: 1},
+                    {buttonId: `lick`, buttonText: {displayText: '*Lick*️️'}, type: 1},
+                    {buttonId: `kiss`, buttonText: {displayText: '*Kiss*'}, type: 1},
+                    {buttonId: `bite`, buttonText: {displayText: '*Bite*️️'}, type: 1},
+                    {buttonId: `yeet`, buttonText: {displayText: '*Yeet*️️'}, type: 1},
+                    {buttonId: `neko`, buttonText: {displayText: '*Neko*'}, type: 1},
+                    {buttonId: `bully`, buttonText: {displayText: '*Bully*'}, type: 1},
+                    {buttonId: `bonk`, buttonText: {displayText: '*Bonk*️️'}, type: 1},
+                    {buttonId: `wink`, buttonText: {displayText: '*Wink*️️'}, type: 1}
+                ]
+                let buttonMessage = {
+                    image: { url: 'https://telegra.ph/file/e8f3e419b3dafe9fe8153.jpg' },
+                    caption: `
+*●●●Queen👸Alexa●●●*
+~click you like button~`,
                     footer: XeonBotInc.user.name,
                     buttons: buttons,
                     headerType: 4
