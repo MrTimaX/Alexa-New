@@ -2103,7 +2103,7 @@ break
             break
             case 'logo-pack': {
                 let buttons = [
-                    {buttonId: `anime`, buttonText: {displayText: '*🧑Cartoon cute gril*'}, type: 1},
+                    {buttonId: `anime`, buttonText: {displayText: '*Cartoon cute gril*'}, type: 1},
                     {buttonId: `waifu`, buttonText: {displayText: '*Waifu*️'}, type: 1},
                     {buttonId: `cry`, buttonText: {displayText: '*Cry*️️'}, type: 1},
                     {buttonId: `kill`, buttonText: {displayText: '*Kill*'}, type: 1},
@@ -2130,7 +2130,18 @@ break
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-	    case 'ytmp3': case 'getmusic': case 'ytaudio': {
+	    case 'song': case 'ytmp3': case 'audio': {
+	            oh = `⛔ *INVAID DOWNLOADED*`
+                if (!text) return reply(`⛔*Enter link.*\nකරුණාකර සබැදියක් ඇතුලත් කරන්න.*`)
+                XeonBotInc.sendMessage(from, { text: `*•●●searching you song●●•*` }, { quoted: m })
+                let media = await axios.get(`https://rei-api.herokuapp.com/api/dl/ytav?url=${text}`)
+                if (media.filesize >= 999999) return reply('⛔*Video Maximum Limit* '+util.format(media))
+                XeonBotInc.sendMessage(from, { text: `*●●●download you song●●●*` }, { quoted: m })
+                XeonBotInc.sendMessage(from, { text: `*■■■uploding you song■■■*` }, { quoted: m })
+                XeonBotInc.sendMessage(m.chat, { audio: { url: media.result.video.url }, mimetype: 'audio/mpeg', fileName: `${media.result.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
+             }          
+             break
+             case 'songxxxx': case 'getmusic': case 'ytaudio': {
 	            oh = `⛔ *INVAID DOWNLOADED*`
                 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
@@ -2139,7 +2150,7 @@ break
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
                 XeonBotInc.sendImage(m.chat, media.thumb, `🐶 Title : ${media.title}\n🐶 File Size : ${media.filesizeF}\n🐶 Url : ${isUrl(text)}\n🐶 Ext : MP3\n🐶 Resolution : ${args[1] || '320kbps'}`, m)
                 XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
-             }          
+             }
              break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
