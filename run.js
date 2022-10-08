@@ -2133,11 +2133,11 @@ break
 	    case 'song': case 'ytmp3': case 'audio': {
 	            oh = `⛔ *INVAID DOWNLOADED*`
                 if (!text) return reply(`⛔*Enter link.*\nකරුණාකර සබැදියක් ඇතුලත් කරන්න.*`)
-                let media = await axios.get(`https://rei-api.herokuapp.com/api/dl/ytav?url=${text}`)
+                let media = axios.get(`https://rei-api.herokuapp.com/api/dl/ytplay?q=${text}`)
                 if (media.filesize >= 999999) return reply('⛔*Video Maximum Limit* '+util.format(media))
                  newsong = (`media.result,audio.url`)
-                XeonBotInc.sendImage(m.chat, media.result.thumb, `💟 Title : ${media.result.title}}`, m)
-                XeonBotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }).catch ((err) => reply(oh))
+                XeonBotInc.sendImage(m.chat, media.thumb, `💟 Title : ${media.result.title}}`, m)
+                XeonBotInc.sendMessage(m.chat, { audio: newsong, mimetype: 'audio/mp4', ptt: true }, { quoted: m }).catch ((err) => reply(oh))
              }          
              break
              case 'songxxxx': case 'getmusic': case 'ytaudio': {
@@ -2154,10 +2154,9 @@ break
              case 'video': case 'ytmp4': case 'mp4xxx': {
 	            oh = `⛔ *INVAID DOWNLOADED*`
                 if (!text) return reply(`⛔*Enter link.*\nකරුණාකර සබැදියක් ඇතුලත් කරන්න.*`)
-                let media = await axios.get(`https://rei-api.herokuapp.com/api/dl/ytav?url=${text}`)
+                let media = axios.get(`https://rei-api.herokuapp.com/api/dl/ytav?url=${text}`)
                 if (media.filesize >= 999999) return reply('⛔*Video Maximum Limit* '+util.format(media))
-                XeonBotInc.sendImage(m.chat, media.result.thumb, `💟 Title : ${media.result.title}}`, m)
-                XeonBotInc.sendMessage(m.chat, { audio: { url: media.result.video.url }, mimetype: 'video/mpeg', fileName: `${media.result.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
+                XeonBotInc.sendMessage(m.chat, { audio: { media.video.url }, mimetype: 'audio/mp4', ptt: true }, { quoted: m }).catch ((err) => reply(oh))
             }
             case 'ytmp4xxx': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
