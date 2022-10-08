@@ -2133,10 +2133,10 @@ break
 	    case 'song': case 'ytmp3': case 'audio': {
 	            oh = `⛔ *INVAID DOWNLOADED*`
                 if (!text) return reply(`⛔*Enter link.*\nකරුණාකර සබැදියක් ඇතුලත් කරන්න.*`)
-                let media = axios.get(`https://rei-api.herokuapp.com/api/dl/ytplay?q=${text}`)
-                newsong = (`media.result,audio.url`)
-                XeonBotInc.sendImage(m.chat, media.thumb, `💟 Title : ${media.result.title}}`, m)
-                XeonBotInc.sendMessage(m.chat, { audio: newsong, mimetype: 'audio/mpeg', ptt: true }, { quoted: m }).catch ((err) => reply(oh))
+                axios.get(`https://rei-api.herokuapp.com/api/dl/ytav?url=${text}`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data.result.thumb, `💟 Title : ${data.result.title}}`, m)
+                XeonBotInc.sendMessage(m.chat, { audio: { data.result.audio.url }, mimetype: 'audio/mp4', ptt: true }, { quoted: m }).catch ((err) => reply(oh))
              }          
              break
              case 'songxxxx': case 'getmusic': case 'ytaudio': {
@@ -2150,13 +2150,7 @@ break
                 XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
              }
              break
-             case 'video': case 'ytmp4': case 'mp4xxx': {
-	            oh = `⛔ *INVAID DOWNLOADED*`
-                if (!text) return reply(`⛔*Enter link.*\nකරුණාකර සබැදියක් ඇතුලත් කරන්න.*`)
-                let media = axios.get(`https://rei-api.herokuapp.com/api/dl/ytav?url=${text}`)
-               XeonBotInc.sendMessage(m.chat, { audio: { media.result.audio.url }, mimetype: 'audio/mp4', ptt: true }, { quoted: m }).catch ((err) => reply(oh))
-            }
-            case 'ytmp4xxx': case 'getvideo': case 'ytvideo': {
+             case 'ytmp4xxx': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
                 let quality = args[1] ? args[1] : '360p'
