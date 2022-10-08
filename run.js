@@ -2152,15 +2152,16 @@ break
                 XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
              }
              break
-             case 'song': case 'ytmp3': case 'audio': {
+             case 'video': case 'ytmp4': case 'mp4xxx': {
 	            oh = `⛔ *INVAID DOWNLOADED*`
                 if (!text) return reply(`⛔*Enter link.*\nකරුණාකර සබැදියක් ඇතුලත් කරන්න.*`)
-                XeonBotInc.sendMessage(from, { text: `*•●●searching you song●●•*` }, { quoted: m })
+                XeonBotInc.sendMessage(from, { text: `*•●●searching you video●●•*` }, { quoted: m })
                 let media = await axios.get(`https://rei-api.herokuapp.com/api/dl/ytav?url=${text}`)
                 if (media.filesize >= 999999) return reply('⛔*Video Maximum Limit* '+util.format(media))
                 XeonBotInc.sendMessage(from, { text: `*●●●download you song●●●*` }, { quoted: m })
                 XeonBotInc.sendMessage(from, { text: `*■■■uploding you song■■■*` }, { quoted: m })
                 XeonBotInc.sendMessage(m.chat, { audio: { url: media.result.video.url }, mimetype: 'video/mpeg', fileName: `${media.result.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
+            }
             case 'ytmp4xxx': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
