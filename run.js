@@ -213,6 +213,10 @@ const reply = (teks) => {
             XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-New/media/main.jpg`),"sourceUrl": "https://github.com/ChamodKeshan/Queen-Alexa"}}}, { quoted: m})
         }
         
+        const repay = (teks) => {
+        XeonBotInc.sendMessage(from, { text: teks }, { quoted: m})
+       }
+        
         const replay = (teks) => {
             XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-New/media/main.jpg`),"sourceUrl": "https://github.com/ChamodKeshan/Queen-Alexa"}}}, { quoted: m})
         }
@@ -2132,11 +2136,12 @@ break
             break
 	    case 'song': case 'ytmp3': case 'audio': {
 	            oh = `⛔ *INVAID DOWNLOADED*`
-                if (!text) return reply(`⛔*Enter link.*\nකරුණාකර සබැදියක් ඇතුලත් කරන්න.*`)
-                axios.get(`https://rei-api.herokuapp.com/api/dl/ytav?url=${text}`)
+                if (!text) return repay(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
+                axios.get(`https://zenzapis.xyz/downloader/y2mate?apikey=016aef4e26e1&query=${text}`)
 					.then(({data}) => {
-					XeonBotInc.sendImage(m.chat, data.result.thumb, `💟 Title : ${data.result.title}}`, m)
-                XeonBotInc.sendMessage(m.chat, { audio: { data.result.audio.url }, mimetype: 'audio/mp4', ptt: true }, { quoted: m }).catch ((err) => reply(oh))
+					if (data.status == false) return repay(`⛔*NOT FOUND`)
+					if (data.ŕesult.sizeAidio >= 999999) return reply('🚫*Video Size Maximum* '+util.format(media))
+					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getAudio }, mimetype: 'audio/mpeg', fileName: `${data.result.title}.mp3` }, { quoted: m }).catch ((err) => repay(oh))
              }          
              break
              case 'songxxxx': case 'getmusic': case 'ytaudio': {
@@ -2150,13 +2155,14 @@ break
                 XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
              }
              break
-             case 'ytmp4xxx': case 'getvideo': case 'ytvideo': {
-                let { ytv } = require('./lib/y2mate')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
-                let quality = args[1] ? args[1] : '360p'
-                let media = await ytv(text, quality)
-                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                XeonBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐶 Title : ${media.title}\n🐶 File Size : ${media.filesizeF}\n🐶 Url : ${isUrl(text)}\n🐶 Ext : MP3\n🐶 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+             case 'ytmp4': case 'video': case 'ytvideo': {
+                oh = `⛔ *INVAID DOWNLOADED*`
+                if (!text) return repay(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
+                axios.get(`https://zenzapis.xyz/downloader/y2mate?apikey=016aef4e26e1&query=${text}`)
+					.then(({data}) => {
+					if (data.status == false) return repay(`⛔*NOT FOUND`)
+					if (data.ŕesult.sizeAidio >= 999999) return reply('🚫*Video Size Maximum* '+util.format(media))
+					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getVideo }, mimetype: 'video/mp4', fileName: `${data.result.title}.mp4` }, { quoted: m }).catch ((err) => repay(oh))
             }
             break
             case 'amazone': case 'neotro': {
@@ -3754,7 +3760,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
  │     USING
  │ AMAZONE ALEXA ✉️
  │©️TEENU-X
- ╰───────────●●►`,
+ ╰───────────●●►*`,
                             hydratedButtons: [{
                                 urlButton: {
                                     displayText: 'YouTube📍',
@@ -4221,7 +4227,7 @@ else MSG = `\n\n*‍Queen👸Alexa*\n*💫🧚‍♀️Hey There Im Alive Now*\n
         }
             break
             case 'dyno': case 'clear': case 'mediafire': case 'fb': case 'tiktok': case 'panel': case 'mute': case 'update': {
-                XeonBotInc.sendMessage(from, { text: `⛔ *එය තවම සූදානම් නොමැත.* ඇලෙක්සා bot ගේ මීලග version update එකෙන් පසුව බලාපොරොත්තු වන්න.* *Coming soon*` }, { quoted: m})
+                XeonBotInc.sendMessage(from, { text: `⛔ *එය තවම සූදානම් නොමැත.* *ඇලෙක්සා bot ගේ මීලග version update එකෙන් පසුව බලාපොරොත්තු වන්න.* *Coming soon*` }, { quoted: m})
         }
             break
             case 'alexa': {
